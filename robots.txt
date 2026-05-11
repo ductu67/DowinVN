@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /test1252.html
+Disallow: /test1258.html
+
+Sitemap: https://dowinvietnam.com/sitemap.xml
