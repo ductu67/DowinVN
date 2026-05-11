@@ -1,0 +1,312 @@
+<style>
+/* ============================================================
+   Chat Widget — DOWIN Việt Nam v2.0
+   Inline styles for the floating multi-channel chat widget.
+   ============================================================ */
+.chat-widget {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: var(--z-toast, 1090);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  transition: transform 0.3s ease;
+}
+.chat-widget__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.chat-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  border: none;
+  padding: 10px 14px 10px 10px;
+  border-radius: var(--radius-xl, 16px);
+  box-shadow: var(--shadow-lg, 0 8px 24px rgba(10,31,68,0.14));
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--color-gray-900, #111827);
+  min-width: 200px;
+  transition: transform var(--transition-base, 0.2s ease), box-shadow var(--transition-base, 0.2s ease);
+  font-family: inherit;
+}
+.chat-option:hover {
+  transform: translateX(-4px);
+  box-shadow: var(--shadow-xl, 0 16px 40px rgba(10,31,68,0.18));
+}
+.chat-option__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-weight: 800;
+  font-size: 18px;
+  color: white;
+}
+.chat-option__icon--zalo    { background: #0068FF; }
+.chat-option__icon--messenger { background: linear-gradient(135deg, #0095F6, #A334FA); }
+.chat-option__icon--wechat  { background: #07C160; }
+.chat-option__info {
+  display: flex;
+  flex-direction: column;
+}
+.chat-option__info strong {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.chat-option__info small {
+  font-size: 0.75rem;
+  color: var(--color-gray-500, #6B7280);
+}
+.chat-trigger {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-accent-500, #E84B27);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg, 0 8px 24px rgba(10,31,68,0.14));
+  transition: background var(--transition-base, 0.2s ease), transform var(--transition-base, 0.2s ease);
+}
+.chat-trigger:hover {
+  background: var(--color-accent-600, #C93D1C);
+  transform: scale(1.05);
+}
+
+/* WeChat Modal */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal, 1100);
+  background: rgba(10,31,68,0.55);
+  align-items: center;
+  justify-content: center;
+}
+.modal-overlay.is-open {
+  display: flex;
+}
+.modal-content {
+  background: white;
+  border-radius: var(--radius-2xl, 20px);
+  padding: 32px 24px 24px;
+  position: relative;
+  box-shadow: var(--shadow-2xl, 0 24px 64px rgba(10,31,68,0.22));
+  animation: modalIn 0.22s ease;
+}
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: var(--color-gray-500, #6B7280);
+  line-height: 1;
+  padding: 4px 6px;
+  border-radius: 4px;
+  transition: color var(--transition-fast, 0.12s), background var(--transition-fast, 0.12s);
+}
+.modal-close:hover {
+  color: var(--color-gray-900, #111827);
+  background: var(--color-gray-100, #F3F4F6);
+}
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.92) translateY(12px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@media (max-width: 480px) {
+  .chat-widget {
+    bottom: 80px;
+    right: 16px;
+  }
+  .chat-option {
+    min-width: 180px;
+  }
+}
+</style>
+
+<!-- ============================================================
+     Chat Widget: Zalo + Messenger + WeChat
+     ============================================================ -->
+<div class="chat-widget" id="chatWidget" aria-label="Liên hệ nhanh">
+
+  <!-- Channel buttons (hidden when collapsed) -->
+  <div class="chat-widget__menu" id="chatMenu" hidden>
+
+    <!-- Zalo -->
+    <a href="https://zalo.me/0981422756"
+       class="chat-option"
+       target="_blank" rel="noopener"
+       aria-label="Chat Zalo">
+      <span class="chat-option__icon chat-option__icon--zalo">Z</span>
+      <span class="chat-option__info">
+        <strong>Zalo</strong>
+        <small>Phản hồi ~15 phút</small>
+      </span>
+    </a>
+
+    <!-- Messenger -->
+    <a href="https://m.me/Dowinvietnam"
+       class="chat-option"
+       target="_blank" rel="noopener"
+       aria-label="Facebook Messenger">
+      <span class="chat-option__icon chat-option__icon--messenger">
+        <!-- Messenger bolt/lightning icon -->
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 2C6.477 2 2 6.145 2 11.259c0 2.81 1.257 5.323 3.265 7.063V22l3.056-1.678c.815.225 1.68.347 2.679.347 5.523 0 10-4.145 10-9.259S17.523 2 12 2zm.994 12.465l-2.545-2.715-4.965 2.715 5.461-5.796 2.608 2.715 4.902-2.715-5.461 5.796z"/>
+        </svg>
+      </span>
+      <span class="chat-option__info">
+        <strong>Messenger</strong>
+        <small>Facebook Chat</small>
+      </span>
+    </a>
+
+    <!-- WeChat (button — opens QR modal) -->
+    <button class="chat-option chat-option--wechat"
+            type="button"
+            aria-label="WeChat QR Code"
+            data-action="show-wechat">
+      <span class="chat-option__icon chat-option__icon--wechat">
+        <!-- WeChat speech-bubble icon -->
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M9.5 4C5.358 4 2 7.022 2 10.8c0 1.954.92 3.713 2.38 4.958L4 18l2.458-1.23A8.255 8.255 0 0 0 9.5 17.6c.518 0 1.025-.045 1.515-.13C10.861 17.015 10.75 16.516 10.75 16c0-3.314 2.91-6 6.5-6 .408 0 .806.036 1.192.103C17.742 7.218 13.983 4 9.5 4zM6.75 10a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm5.5 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm5 3c-2.761 0-5 1.791-5 4s2.239 4 5 4c.607 0 1.186-.093 1.723-.264L21 22l-.455-2.28C21.472 18.87 22 17.992 22 17c0-2.209-2.239-4-4.75-4zm-1.5 3.5a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5zm3 0a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5z"/>
+        </svg>
+      </span>
+      <span class="chat-option__info">
+        <strong>WeChat</strong>
+        <small>Quét QR code</small>
+      </span>
+    </button>
+
+  </div><!-- /.chat-widget__menu -->
+
+  <!-- Main toggle button -->
+  <button class="chat-trigger" id="chatTrigger"
+          type="button"
+          aria-expanded="false"
+          aria-label="Mở/đóng chat">
+    <!-- Message circle icon (shown when closed) -->
+    <span class="chat-trigger__icon chat-trigger__icon--open" aria-hidden="true">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+      </svg>
+    </span>
+    <!-- X icon (shown when open) -->
+    <span class="chat-trigger__icon chat-trigger__icon--close" aria-hidden="true" style="display:none">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </span>
+  </button>
+
+</div><!-- /.chat-widget -->
+
+<!-- WeChat QR Modal -->
+<div class="modal-overlay" id="wechatModal"
+     role="dialog" aria-modal="true"
+     aria-label="WeChat QR Code">
+  <div class="modal-content" style="max-width:320px;text-align:center">
+    <button class="modal-close" id="wechatModalClose" aria-label="Đóng">✕</button>
+    <h3 style="margin-bottom:16px;color:var(--color-navy-900, #0A1F44)">Chat WeChat</h3>
+    <img src="/images/wechat-qr.png"
+         alt="WeChat QR Code DowinVN"
+         width="200" height="200"
+         style="margin:0 auto 16px;display:block">
+    <p style="color:var(--color-gray-600, #4B5563);font-size:0.875rem">
+      Quét mã QR bằng WeChat để liên hệ<br>
+      <strong>Dowinvietnam</strong>
+    </p>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var widget     = document.getElementById('chatWidget');
+  var trigger    = document.getElementById('chatTrigger');
+  var menu       = document.getElementById('chatMenu');
+  var openIcon   = trigger ? trigger.querySelector('.chat-trigger__icon--open')  : null;
+  var closeIcon  = trigger ? trigger.querySelector('.chat-trigger__icon--close') : null;
+  var wechatBtn  = document.querySelector('[data-action="show-wechat"]');
+  var wechatModal = document.getElementById('wechatModal');
+  var wechatClose = document.getElementById('wechatModalClose');
+
+  if (!trigger || !menu) return;
+
+  var isOpen = false;
+
+  trigger.addEventListener('click', function () {
+    isOpen = !isOpen;
+    trigger.setAttribute('aria-expanded', String(isOpen));
+
+    if (isOpen) {
+      menu.removeAttribute('hidden');
+      if (openIcon)  openIcon.style.display  = 'none';
+      if (closeIcon) closeIcon.style.display = '';
+    } else {
+      menu.setAttribute('hidden', '');
+      if (openIcon)  openIcon.style.display  = '';
+      if (closeIcon) closeIcon.style.display = 'none';
+    }
+
+    // GA4 event
+    if (isOpen && window.gtag) {
+      gtag('event', 'chat_opened', { channel: 'widget' });
+    }
+  });
+
+  // Show WeChat modal
+  if (wechatBtn && wechatModal) {
+    wechatBtn.addEventListener('click', function () {
+      wechatModal.classList.add('is-open');
+      if (window.gtag) gtag('event', 'chat_opened', { channel: 'wechat' });
+    });
+  }
+
+  // Close WeChat modal
+  function closeWechat() {
+    if (wechatModal) wechatModal.classList.remove('is-open');
+  }
+
+  if (wechatClose) wechatClose.addEventListener('click', closeWechat);
+  if (wechatModal) {
+    wechatModal.addEventListener('click', function (e) {
+      if (e.target === wechatModal) closeWechat();
+    });
+  }
+
+  // Escape key closes modal
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeWechat();
+  });
+
+  // Hide widget on scroll-down (mobile), show on scroll-up
+  var lastScrollY = window.scrollY;
+  window.addEventListener('scroll', function () {
+    var current = window.scrollY;
+    if (current > lastScrollY + 50 && current > 200) {
+      widget.style.transform = 'translateY(calc(100% + 40px))';
+    } else if (current < lastScrollY - 20) {
+      widget.style.transform = '';
+    }
+    lastScrollY = current;
+  }, { passive: true });
+})();
+</script>

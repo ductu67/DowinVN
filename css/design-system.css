@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-gray-900);
+  background: var(--color-white);
+  line-height: var(--leading-normal);
+}
+
+img, video, svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  background: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --color-navy-900: #0A1F44;
+  --color-navy-800: #0F2A5A;
+  --color-navy-700: #1E3A5F;
+  --color-navy-600: #254E7A;
+  --color-navy-500: #2C5AA0;
+  --color-navy-400: #4A7CC7;
+  --color-navy-200: #A8C4E8;
+  --color-navy-100: #D4E2F4;
+  --color-navy-50: #EBF2FA;
+
+  --color-steel-800: #1E3A8A;
+  --color-steel-700: #1E40AF;
+  --color-steel-600: #2563EB;
+  --color-steel-500: #3B82F6;
+  --color-steel-400: #60A5FA;
+  --color-steel-300: #93C5FD;
+  --color-steel-100: #DBEAFE;
+  --color-steel-50: #EFF6FF;
+
+  --color-accent-700: #C2410C;
+  --color-accent-600: #EA580C;
+  --color-accent-500: #F97316;
+  --color-accent-400: #FB923C;
+  --color-accent-300: #FDBA74;
+  --color-accent-100: #FFEDD5;
+  --color-accent-50: #FFF7ED;
+
+  --color-gray-950: #030712;
+  --color-gray-900: #111827;
+  --color-gray-800: #1F2937;
+  --color-gray-700: #374151;
+  --color-gray-600: #4B5563;
+  --color-gray-500: #6B7280;
+  --color-gray-400: #9CA3AF;
+  --color-gray-300: #D1D5DB;
+  --color-gray-200: #E5E7EB;
+  --color-gray-100: #F3F4F6;
+  --color-gray-50: #F9FAFB;
+  --color-white: #FFFFFF;
+
+  --color-success: #10B981;
+  --color-success-light: #D1FAE5;
+  --color-warning: #F59E0B;
+  --color-warning-light: #FEF3C7;
+  --color-error: #EF4444;
+  --color-error-light: #FEE2E2;
+  --color-info: #3B82F6;
+  --color-info-light: #DBEAFE;
+
+  --font-display: 'Space Grotesk', 'Manrope', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Courier New', monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: clamp(2.5rem, 5vw, 3.5rem);
+  --text-6xl: clamp(3rem, 7vw, 4.5rem);
+
+  --leading-none: 1;
+  --leading-tight: 1.15;
+  --leading-snug: 1.35;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.75;
+  --leading-loose: 2;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+
+  --space-0: 0;
+  --space-px: 1px;
+  --space-0-5: 2px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+  --space-11: 160px;
+  --space-12: 192px;
+
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1536px;
+
+  --page-gutter: clamp(16px, 4vw, 48px);
+  --section-gap: clamp(48px, 8vw, 96px);
+
+  --radius-none: 0;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 20px;
+  --radius-2xl: 28px;
+  --radius-full: 9999px;
+
+  --shadow-none: none;
+  --shadow-xs: 0 1px 2px rgba(10, 31, 68, 0.04);
+  --shadow-sm: 0 2px 4px rgba(10, 31, 68, 0.06), 0 1px 2px rgba(10, 31, 68, 0.04);
+  --shadow-md: 0 4px 12px rgba(10, 31, 68, 0.08), 0 2px 4px rgba(10, 31, 68, 0.04);
+  --shadow-lg: 0 10px 24px rgba(10, 31, 68, 0.12), 0 4px 8px rgba(10, 31, 68, 0.06);
+  --shadow-xl: 0 20px 40px rgba(10, 31, 68, 0.16), 0 8px 16px rgba(10, 31, 68, 0.08);
+  --shadow-2xl: 0 32px 64px rgba(10, 31, 68, 0.20);
+  --shadow-inner: inset 0 2px 4px rgba(10, 31, 68, 0.06);
+
+  --border-color: var(--color-gray-200);
+  --border-color-strong: var(--color-gray-300);
+  --border-color-focus: var(--color-steel-500);
+  --border-color-accent: var(--color-accent-500);
+
+  --z-base: 0;
+  --z-raised: 10;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-tooltip: 600;
+
+  --transition-fast: 150ms ease;
+  --transition-base: 200ms ease;
+  --transition-slow: 300ms ease;
+  --transition-slower: 400ms ease;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.container {
+  max-width: var(--container-xl);
+  padding-left: var(--page-gutter);
+  padding-right: var(--page-gutter);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-sm {
+  max-width: var(--container-sm);
+  padding-left: var(--page-gutter);
+  padding-right: var(--page-gutter);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-md {
+  max-width: var(--container-md);
+  padding-left: var(--page-gutter);
+  padding-right: var(--page-gutter);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-lg {
+  max-width: var(--container-lg);
+  padding-left: var(--page-gutter);
+  padding-right: var(--page-gutter);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-2xl {
+  max-width: var(--container-2xl);
+  padding-left: var(--page-gutter);
+  padding-right: var(--page-gutter);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}

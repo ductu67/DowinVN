@@ -1,0 +1,66 @@
+<header class="header" id="site-header">
+
+  <a class="logo" href="/">
+    <img class="logo__img" src="/logo.png" alt="Logo DOWIN Việt Nam" width="40" height="40">
+    <span class="logo__name">DOWIN 東雲工業</span>
+  </a>
+
+  <nav id="site-nav" class="site-nav" aria-label="Điều hướng chính">
+
+    <a href="/" data-nav="home">Trang chủ</a>
+
+    <!-- Sản phẩm -->
+    <div class="nav-dropdown" data-nav="products">
+      <button class="nav-dropdown__btn" type="button" aria-expanded="false" aria-haspopup="true">
+        Sản phẩm
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </button>
+      <div class="nav-dropdown__menu" role="menu">
+        <a href="/products/dw-1000.html" role="menuitem">Máy ép khuôn cát DW-1000</a>
+        <a href="/products/dw-1200.html" role="menuitem">Máy ép khuôn cát DW-1200</a>
+        <a href="/products/dw-1600.html" role="menuitem">Máy ép khuôn cát DW-1600</a>
+        <hr style="border:none;border-top:1px solid var(--border-color);margin:4px 8px;">
+        <a href="/products/sand-mixer.html" role="menuitem">Máy trộn cát</a>
+        <a href="/products/casting-line.html" role="menuitem">Dây chuyền đúc tự động</a>
+        <hr style="border:none;border-top:1px solid var(--border-color);margin:4px 8px;">
+        <a href="/products/compare.html" role="menuitem">⚖️ So sánh sản phẩm</a>
+      </div>
+    </div>
+
+    <!-- Giải pháp -->
+    <div class="nav-dropdown" data-nav="solutions">
+      <button class="nav-dropdown__btn" type="button" aria-expanded="false" aria-haspopup="true">
+        Giải pháp
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </button>
+      <div class="nav-dropdown__menu" role="menu">
+        <a href="/projects/index.html" role="menuitem">Dự án &amp; Case Study</a>
+        <a href="/services.html" role="menuitem">Dịch vụ</a>
+        <a href="/faq.html" role="menuitem">FAQ</a>
+      </div>
+    </div>
+
+    <a href="/blog/index.html" data-nav="blog">Tin tức</a>
+    <a href="/about.html" data-nav="about">Giới thiệu</a>
+    <a href="/contact.html" data-nav="contact">Liên hệ</a>
+
+  </nav>
+
+  <div class="header-actions">
+    <div class="header-lang">
+      <a href="#" data-lang="vi" class="active" aria-label="Tiếng Việt">VI</a>
+      <span aria-hidden="true">|</span>
+      <a href="#" data-lang="en" aria-label="English">EN</a>
+    </div>
+    <a href="/contact.html" class="btn btn-primary btn-sm">📋 Báo giá</a>
+  </div>
+
+  <button type="button" class="nav-toggle" id="nav-toggle"
+          aria-controls="site-nav" aria-expanded="false" aria-label="Mở menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+</header>
+<div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
