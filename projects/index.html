@@ -3,70 +3,155 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dự Án & Case Study | DOWIN Việt Nam</title>
-<meta name="description" content="Dự án lắp đặt thiết bị đúc của DowinVN: case study thực tế từ các nhà máy đúc tại Việt Nam.">
+<title>Dự Án &amp; Case Study Thiết Bị Đúc | DOWIN Việt Nam</title>
+<meta name="description" content="Các dự án lắp đặt thực tế của DOWIN Việt Nam: dây chuyền đúc tự động, máy ép khuôn DW series tại các nhà máy trên toàn quốc.">
 <link rel="canonical" href="https://dowinvietnam.com/projects/">
 <link rel="icon" type="image/png" href="/logo.png">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dowinvietnam.com/projects/">
-<meta property="og:title" content="Dự Án & Case Study | DOWIN Việt Nam">
-<meta property="og:description" content="Dự án lắp đặt thiết bị đúc của DowinVN: case study thực tế từ các nhà máy đúc tại Việt Nam.">
-<meta property="og:image" content="https://dowinvietnam.com/images/banner.webp">
+<meta property="og:title" content="Dự Án &amp; Case Study | DOWIN Việt Nam">
+<meta property="og:description" content="Các dự án lắp đặt thực tế của DOWIN — dây chuyền đúc tự động tại các nhà máy trên toàn quốc.">
+<meta property="og:image" content="https://dowinvietnam.com/images/projects/project1.webp">
 <meta property="og:locale" content="vi_VN">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Dự Án & Case Study | DOWIN Việt Nam">
-<meta name="twitter:description" content="Dự án lắp đặt thiết bị đúc của DowinVN: case study thực tế từ các nhà máy đúc tại Việt Nam.">
-<meta name="twitter:image" content="https://dowinvietnam.com/images/banner.webp">
 <link rel="alternate" hreflang="vi" href="https://dowinvietnam.com/projects/">
 <link rel="alternate" hreflang="en" href="https://dowinvietnam.com/en/projects/">
 <link rel="alternate" hreflang="x-default" href="https://dowinvietnam.com/projects/">
 <link rel="stylesheet" href="/css/design-system.css">
 <link rel="stylesheet" href="/css/components.css">
 <link rel="stylesheet" href="/css/layout.css">
-<!-- Google Analytics (placeholder — replace G-XXXXXXXXXX with real ID) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
-<!-- Schema.org Organization -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Công ty TNHH Thiết bị Máy móc Công nghiệp DOWIN Việt Nam",
-  "alternateName": ["DOWINVN", "DOWIN Machinery"],
-  "url": "https://dowinvietnam.com/",
-  "logo": "https://dowinvietnam.com/logo.png",
-  "description": "Nhà cung cấp máy ép khuôn cát tươi, thiết bị đúc và dây chuyền sản xuất.",
-  "address": {"@type": "PostalAddress", "addressLocality": "Phường Mão Điền", "addressRegion": "Bắc Ninh", "addressCountry": "VN"},
-  "telephone": "+84981422756",
-  "email": "Dowinvietnam@gmail.com",
-  "sameAs": ["https://www.facebook.com/people/Dowinvietnam/61578386100164","https://www.youtube.com/@Auto-Foundry2023"]
-}
-</script>
+<style>
+.project-card { background:var(--color-white);border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-sm);transition:box-shadow var(--transition-base),transform var(--transition-base); }
+.project-card:hover { box-shadow:var(--shadow-md);transform:translateY(-2px); }
+.project-card__img { aspect-ratio:4/3;overflow:hidden; }
+.project-card__img img { width:100%;height:100%;object-fit:cover;transition:transform 0.4s; }
+.project-card:hover .project-card__img img { transform:scale(1.04); }
+.project-card__body { padding:var(--space-5); }
+.project-card__title { font-size:var(--text-lg);font-weight:var(--fw-bold);color:var(--color-navy-900);margin-bottom:var(--space-2); }
+.project-card__meta { display:flex;gap:var(--space-3);flex-wrap:wrap;margin-bottom:var(--space-3); }
+.project-card__meta span { font-size:var(--text-xs);color:var(--color-gray-500); }
+.project-card__desc { font-size:var(--text-sm);color:var(--color-gray-600);line-height:var(--leading-relaxed); }
+.project-card__tags { display:flex;flex-wrap:wrap;gap:var(--space-2);margin-top:var(--space-3); }
+</style>
 </head>
-<body class="page-body" data-include-page="solutions">
+<body class="page-body" data-include-page="projects">
 
 <div data-include="/partials/header.html"></div>
 
 <main>
-  <!-- Breadcrumb -->
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <div class="container">
-      <ol class="breadcrumb__list">
-        <li class="breadcrumb__item"><a href="/" class="breadcrumb__link">Trang chủ</a></li>
-        <li class="breadcrumb__item breadcrumb__item--active" aria-current="page">Dự án</li>
-      </ol>
-    </div>
-  </nav>
 
-  <section class="section">
+  <section class="hero hero--compact" aria-label="Dự án thực tế">
+    <div class="hero__overlay" style="background:linear-gradient(135deg,var(--color-navy-900) 0%,var(--color-navy-700) 100%)" aria-hidden="true"></div>
+    <div class="container hero__content">
+      <nav class="breadcrumb breadcrumb--light" aria-label="Breadcrumb">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item"><a href="/" class="breadcrumb__link">Trang chủ</a></li>
+          <li class="breadcrumb__item breadcrumb__item--active" aria-current="page">Dự án &amp; Case Study</li>
+        </ol>
+      </nav>
+      <h1 class="hero__title">Dự Án Thực Tế</h1>
+      <p class="hero__subtitle">Hàng trăm dự án lắp đặt thành công tại các nhà máy đúc trên toàn Việt Nam</p>
+    </div>
+  </section>
+
+  <section class="section section--light">
     <div class="container">
-      <div class="section__header">
-        <span class="section__label">DỰ ÁN THỰC TẾ</span>
-        <h1 class="section__title">Dự Án Tiêu Biểu</h1>
-        <p class="section__lead">Nội dung đang được cập nhật. Vui lòng quay lại sau.</p>
+      <div class="card-grid card-grid--4">
+        <div class="card-stat"><div class="card-stat__number">500+</div><div class="card-stat__label">Dự án hoàn thành</div></div>
+        <div class="card-stat"><div class="card-stat__number">30+</div><div class="card-stat__label">Tỉnh thành phủ sóng</div></div>
+        <div class="card-stat"><div class="card-stat__number">98%</div><div class="card-stat__label">Khách hàng hài lòng</div></div>
+        <div class="card-stat"><div class="card-stat__number">5 ngày</div><div class="card-stat__label">Thời gian lắp đặt TB</div></div>
       </div>
     </div>
   </section>
+
+  <section class="section" aria-labelledby="projects-heading">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label">DỰ ÁN TIÊU BIỂU</span>
+        <h2 class="section__title" id="projects-heading">Công Trình Nổi Bật</h2>
+        <p class="section__lead">Từng dự án là minh chứng cho chất lượng và uy tín của DOWIN</p>
+      </div>
+
+      <div class="card-grid card-grid--3">
+
+        <div class="project-card">
+          <div class="project-card__img"><picture><source srcset="/images/projects/project1.avif" type="image/avif"><source srcset="/images/projects/project1.webp" type="image/webp"><img src="/images/projects/project1.jpg" alt="Dây chuyền đúc tự động KCN Bắc Ninh" loading="lazy" decoding="async" width="600" height="450"></picture></div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Dây Chuyền Đúc Tự Động — KCN Bắc Ninh</h3>
+            <div class="project-card__meta"><span>📍 Bắc Ninh</span><span>🗓️ 2024</span><span>⏱️ 7 ngày</span></div>
+            <p class="project-card__desc">Lắp đặt dây chuyền đúc tự động hoàn chỉnh cho nhà máy cơ khí. Hệ thống gồm 2 máy DW-1200, máy trộn cát và băng tải thu hồi cát tự động.</p>
+            <div class="project-card__tags"><span class="badge badge-navy">DW-1200</span><span class="badge badge-gray">Dây chuyền</span><span class="badge badge-gray">Tự động hóa</span></div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card__img"><picture><source srcset="/images/projects/project2.avif" type="image/avif"><source srcset="/images/projects/project2.webp" type="image/webp"><img src="/images/projects/project2.jpg" alt="Máy ép khuôn DW-1200 xưởng đúc Hải Dương" loading="lazy" decoding="async" width="600" height="450"></picture></div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Máy Ép Khuôn DW-1200 — Xưởng Đúc Hải Dương</h3>
+            <div class="project-card__meta"><span>📍 Hải Dương</span><span>🗓️ 2024</span><span>⏱️ 3 ngày</span></div>
+            <p class="project-card__desc">Thay thế máy ép khuôn cũ bằng DW-1200 servo. Năng suất tăng 85%, chi phí điện giảm 32%. Khách hàng đặt thêm 1 máy sau 6 tháng vận hành.</p>
+            <div class="project-card__tags"><span class="badge badge-navy">DW-1200</span><span class="badge badge-gray">Nâng cấp</span><span class="badge badge-accent">Tiêu biểu</span></div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card__img"><picture><source srcset="/images/projects/project3.avif" type="image/avif"><source srcset="/images/projects/project3.webp" type="image/webp"><img src="/images/projects/project3.jpg" alt="Hệ thống đúc khép kín KCN Hưng Yên" loading="lazy" decoding="async" width="600" height="450"></picture></div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Hệ Thống Đúc Khép Kín — KCN Hưng Yên</h3>
+            <div class="project-card__meta"><span>📍 Hưng Yên</span><span>🗓️ 2023</span><span>⏱️ 12 ngày</span></div>
+            <p class="project-card__desc">Thiết kế và lắp đặt hệ thống đúc khép kín cho nhà máy phụ tùng ô tô. 1 DW-1600 + máy trộn cát + hệ thống băng tải và lò rót tự động.</p>
+            <div class="project-card__tags"><span class="badge badge-navy">DW-1600</span><span class="badge badge-gray">Hệ thống lớn</span><span class="badge badge-gray">Ô tô</span></div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card__img"><picture><source srcset="/images/projects/project4.avif" type="image/avif"><source srcset="/images/projects/project4.webp" type="image/webp"><img src="/images/projects/project4.jpg" alt="Máy trộn cát tự động Hà Nội" loading="lazy" decoding="async" width="600" height="450"></picture></div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Máy Trộn Cát + DW-1000 — Nhà Máy Hà Nội</h3>
+            <div class="project-card__meta"><span>📍 Hà Nội</span><span>🗓️ 2023</span><span>⏱️ 4 ngày</span></div>
+            <p class="project-card__desc">Bộ đôi máy trộn cát + DW-1000 cho xưởng đúc phụ tùng máy nông nghiệp. Sản lượng đạt 800 khuôn/ngày làm việc 8 tiếng.</p>
+            <div class="project-card__tags"><span class="badge badge-navy">DW-1000</span><span class="badge badge-gray">Máy trộn cát</span><span class="badge badge-gray">Nông nghiệp</span></div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card__img"><picture><source srcset="/images/projects/project5.avif" type="image/avif"><source srcset="/images/projects/project5.webp" type="image/webp"><img src="/images/projects/project5.jpg" alt="Dây chuyền đúc tích hợp KCN Vĩnh Phúc" loading="lazy" decoding="async" width="600" height="450"></picture></div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Dây Chuyền Đúc Tích Hợp — KCN Vĩnh Phúc</h3>
+            <div class="project-card__meta"><span>📍 Vĩnh Phúc</span><span>🗓️ 2022</span><span>⏱️ 10 ngày</span></div>
+            <p class="project-card__desc">Xây dựng toàn bộ dây chuyền đúc cho nhà máy mới. 3 DW-1200 chạy song song, năng suất 540 khuôn/giờ, tự động hóa 85%.</p>
+            <div class="project-card__tags"><span class="badge badge-navy">DW-1200 × 3</span><span class="badge badge-gray">Nhà máy mới</span><span class="badge badge-accent">Quy mô lớn</span></div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card__img"><picture><source srcset="/images/projects/project6.avif" type="image/avif"><source srcset="/images/projects/project6.webp" type="image/webp"><img src="/images/projects/project6.jpg" alt="Nâng cấp dây chuyền Bình Dương" loading="lazy" decoding="async" width="600" height="450"></picture></div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Nâng Cấp Dây Chuyền — Nhà Máy Bình Dương</h3>
+            <div class="project-card__meta"><span>📍 Bình Dương</span><span>🗓️ 2022</span><span>⏱️ 5 ngày</span></div>
+            <p class="project-card__desc">Nâng cấp từ hệ thống đúc thủ công sang bán tự động với DW-1600. Năng suất tăng 3 lần, nhân công giảm từ 12 người xuống còn 4 người.</p>
+            <div class="project-card__tags"><span class="badge badge-navy">DW-1600</span><span class="badge badge-gray">Nâng cấp</span><span class="badge badge-gray">Miền Nam</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner cta-banner--accent">
+    <div class="container">
+      <h2 class="cta-banner__title">Dự Án Tiếp Theo Là Của Bạn?</h2>
+      <p class="cta-banner__lead">Liên hệ kỹ sư DOWIN để được tư vấn giải pháp và báo giá cho xưởng của bạn</p>
+      <div class="cta-banner__actions">
+        <a href="/contact.html" class="btn btn-primary btn-lg">Nhận tư vấn miễn phí</a>
+        <a href="/products/index.html" class="btn btn-outline btn-lg" style="color:white;border-color:rgba(255,255,255,0.6)">Xem sản phẩm</a>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <div data-include="/partials/footer.html"></div>

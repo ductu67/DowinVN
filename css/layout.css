@@ -436,6 +436,12 @@
   background-color: var(--color-gray-50);
 }
 
+.section--light {
+  background-color: var(--color-white);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
 .section--navy {
   background-color: var(--color-navy-900);
   color: var(--color-white);
@@ -508,9 +514,16 @@
 
 .section-split__img {
   aspect-ratio: 4 / 3;
-  object-fit: cover;
   border-radius: var(--radius-xl);
   width: 100%;
+  overflow: hidden;
+}
+
+.section-split__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .section-split__content {
