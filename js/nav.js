@@ -174,6 +174,32 @@
   }
 
   /* ------------------------------------------------------------------ */
+  /* Language switcher                                                    */
+  /* ------------------------------------------------------------------ */
+
+  function bindLangSwitcher() {
+    var enMeta  = document.querySelector('link[hreflang="en"]');
+    var viMeta  = document.querySelector('link[hreflang="vi"]');
+    var pageLang = document.documentElement.lang || 'vi';
+
+    // Correct active state (header partial always defaults to VI active)
+    document.querySelectorAll('[data-lang]').forEach(function (el) {
+      el.classList.toggle('active', el.dataset.lang === pageLang);
+    });
+
+    document.querySelectorAll('[data-lang]').forEach(function (el) {
+      el.addEventListener('click', function (e) {
+        e.preventDefault();
+        var lang = el.dataset.lang;
+        var meta = lang === 'en' ? enMeta : viMeta;
+        if (meta && meta.getAttribute('href')) {
+          window.location.href = meta.getAttribute('href');
+        }
+      });
+    });
+  }
+
+  /* ------------------------------------------------------------------ */
   /* Init: run immediately if the header is already in the DOM,           */
   /* otherwise wait for include.js to finish injecting partials.          */
   /* ------------------------------------------------------------------ */
@@ -183,6 +209,7 @@
     bindDropdowns();
     bindScrollEffect();
     bindScrollToTop();
+    bindLangSwitcher();
   }
 
   function onDOMReady() {

@@ -3,66 +3,255 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dịch Vụ Lắp Đặt & Bảo Trì | DOWIN Việt Nam</title>
-<meta name="description" content="Dịch vụ DowinVN: lắp đặt máy ép khuôn cát, bảo trì định kỳ, đào tạo vận hành và cung cấp phụ tùng thay thế.">
+<title>Dịch Vụ Lắp Đặt & Bảo Trì Máy Đúc | DOWIN Việt Nam</title>
+<meta name="description" content="DOWIN Việt Nam cung cấp dịch vụ lắp đặt, bảo trì, đào tạo vận hành và phụ tùng thay thế cho toàn bộ dòng máy ép khuôn cát DW. Đội kỹ thuật 24/7 toàn quốc.">
 <link rel="canonical" href="https://dowinvietnam.com/services.html">
 <link rel="icon" type="image/png" href="/logo.png">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dowinvietnam.com/services.html">
 <meta property="og:title" content="Dịch Vụ Lắp Đặt & Bảo Trì | DOWIN Việt Nam">
-<meta property="og:description" content="Dịch vụ DowinVN: lắp đặt máy ép khuôn cát, bảo trì định kỳ, đào tạo vận hành và cung cấp phụ tùng thay thế.">
-<meta property="og:image" content="https://dowinvietnam.com/images/banner.webp">
+<meta property="og:description" content="Lắp đặt, bảo trì, đào tạo và phụ tùng chính hãng cho máy ép khuôn cát DOWIN. Hỗ trợ kỹ thuật 24/7 toàn quốc.">
+<meta property="og:image" content="https://dowinvietnam.com/images/banner1.webp">
 <meta property="og:locale" content="vi_VN">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Dịch Vụ Lắp Đặt & Bảo Trì | DOWIN Việt Nam">
-<meta name="twitter:description" content="Dịch vụ DowinVN: lắp đặt máy ép khuôn cát, bảo trì định kỳ, đào tạo vận hành và cung cấp phụ tùng thay thế.">
-<meta name="twitter:image" content="https://dowinvietnam.com/images/banner.webp">
 <link rel="alternate" hreflang="vi" href="https://dowinvietnam.com/services.html">
 <link rel="alternate" hreflang="en" href="https://dowinvietnam.com/en/services.html">
 <link rel="alternate" hreflang="x-default" href="https://dowinvietnam.com/services.html">
 <link rel="stylesheet" href="/css/design-system.css">
 <link rel="stylesheet" href="/css/components.css">
 <link rel="stylesheet" href="/css/layout.css">
-<!-- Google Analytics (placeholder — replace G-XXXXXXXXXX with real ID) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
-<!-- Schema.org Organization -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Công ty TNHH Thiết bị Máy móc Công nghiệp DOWIN Việt Nam",
-  "alternateName": ["DOWINVN", "DOWIN Machinery"],
-  "url": "https://dowinvietnam.com/",
-  "logo": "https://dowinvietnam.com/logo.png",
-  "description": "Nhà cung cấp máy ép khuôn cát tươi, thiết bị đúc và dây chuyền sản xuất.",
-  "address": {"@type": "PostalAddress", "addressLocality": "Phường Mão Điền", "addressRegion": "Bắc Ninh", "addressCountry": "VN"},
-  "telephone": "+84981422756",
-  "email": "Dowinvietnam@gmail.com",
-  "sameAs": ["https://www.facebook.com/people/Dowinvietnam/61578386100164","https://www.youtube.com/@Auto-Foundry2023"]
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PEGC34ZDT"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4PEGC34ZDT');</script>
+<style>
+.service-card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-sm);
+  border-top: 4px solid transparent;
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
 }
-</script>
+.service-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.service-card--install  { border-top-color: var(--color-primary); }
+.service-card--maintain { border-top-color: #16a34a; }
+.service-card--train    { border-top-color: var(--color-accent-500); }
+.service-card--parts    { border-top-color: #7c3aed; }
+
+.service-card__icon {
+  width: 56px; height: 56px;
+  border-radius: var(--radius-lg);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: var(--space-5);
+}
+.service-card--install  .service-card__icon { background: #dbeafe; }
+.service-card--maintain .service-card__icon { background: #dcfce7; }
+.service-card--train    .service-card__icon { background: #fff7ed; }
+.service-card--parts    .service-card__icon { background: #f3e8ff; }
+
+.service-card__title { font-size: var(--text-xl); font-weight: var(--fw-bold); color: var(--color-navy-900); margin-bottom: var(--space-3); }
+.service-card__desc  { color: var(--color-gray-600); line-height: var(--leading-relaxed); margin-bottom: var(--space-4); }
+.service-card__list  { list-style: none; padding: 0; margin: 0; }
+.service-card__list li { padding: var(--space-1) 0; font-size: var(--text-sm); color: var(--color-gray-600); display: flex; gap: var(--space-2); }
+.service-card__list li::before { content: "✓"; color: var(--color-primary); font-weight: var(--fw-bold); flex-shrink: 0; }
+
+.step-install { counter-reset: install-step; }
+.step-install__item { display: flex; gap: var(--space-6); align-items: flex-start; padding: var(--space-6) 0; border-bottom: 1px solid var(--color-gray-100); counter-increment: install-step; }
+.step-install__item:last-child { border-bottom: none; }
+.step-install__num {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--color-primary); color: white;
+  font-weight: var(--fw-extrabold); font-size: var(--text-lg);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; font-family: var(--font-display);
+}
+.step-install__title { font-size: var(--text-lg); font-weight: var(--fw-semibold); color: var(--color-navy-900); margin-bottom: var(--space-1); }
+.step-install__desc  { color: var(--color-gray-600); font-size: var(--text-sm); line-height: var(--leading-relaxed); }
+.step-install__time  { display: inline-block; margin-top: var(--space-2); font-size: var(--text-xs); background: var(--color-navy-50); color: var(--color-primary); padding: 2px 8px; border-radius: 20px; font-weight: var(--fw-medium); }
+</style>
 </head>
 <body class="page-body" data-include-page="solutions">
 
 <div data-include="/partials/header.html"></div>
 
 <main>
-  <section class="section">
+
+  <section class="hero hero--compact" aria-label="Dịch vụ DOWIN">
+    <div class="hero__overlay" style="background:linear-gradient(135deg,var(--color-navy-900) 0%,var(--color-navy-700) 100%)" aria-hidden="true"></div>
+    <div class="container hero__content">
+      <nav class="breadcrumb breadcrumb--light" aria-label="Breadcrumb">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item"><a href="/" class="breadcrumb__link">Trang chủ</a></li>
+          <li class="breadcrumb__item breadcrumb__item--active" aria-current="page">Dịch vụ</li>
+        </ol>
+      </nav>
+      <h1 class="hero__title">Dịch Vụ Kỹ Thuật</h1>
+      <p class="hero__subtitle">Đội ngũ kỹ sư DOWIN đồng hành từ lắp đặt đến vận hành — hỗ trợ 24/7 toàn quốc</p>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="section section--light">
     <div class="container">
-      <div class="section__header">
-        <span class="section__label">DOWIN Việt Nam</span>
-        <h1 class="section__title">Dịch Vụ Kỹ Thuật & Hỗ Trợ</h1>
-        <p class="section__lead">Nội dung đang được cập nhật. Vui lòng quay lại sau.</p>
+      <div class="card-grid card-grid--4">
+        <div class="card-stat"><div class="card-stat__number">500<span style="font-size:1.2rem">+</span></div><div class="card-stat__label">Dự án lắp đặt thành công</div></div>
+        <div class="card-stat"><div class="card-stat__number">5</div><div class="card-stat__label">Ngày lắp đặt trung bình</div></div>
+        <div class="card-stat"><div class="card-stat__number">24/7</div><div class="card-stat__label">Hỗ trợ kỹ thuật</div></div>
+        <div class="card-stat"><div class="card-stat__number">98%</div><div class="card-stat__label">Khách hàng hài lòng</div></div>
       </div>
     </div>
   </section>
+
+  <!-- 4 Services -->
+  <section class="section" aria-labelledby="services-heading">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label">DỊCH VỤ CỦA CHÚNG TÔI</span>
+        <h2 class="section__title" id="services-heading">Hỗ Trợ Toàn Diện Sau Bán Hàng</h2>
+        <p class="section__lead">Từ ngày máy đến xưởng đến suốt vòng đời vận hành — DOWIN luôn ở đó</p>
+      </div>
+
+      <div class="card-grid card-grid--2">
+
+        <div class="service-card service-card--install">
+          <div class="service-card__icon">🔧</div>
+          <h3 class="service-card__title">Lắp Đặt & Vận Hành</h3>
+          <p class="service-card__desc">Đội kỹ thuật DOWIN trực tiếp đến xưởng khách hàng, lắp đặt và chạy thử đúng tiến độ cam kết.</p>
+          <ul class="service-card__list">
+            <li>Khảo sát mặt bằng trước khi giao máy</li>
+            <li>Lắp đặt chuyên nghiệp, đúng bản vẽ kỹ thuật</li>
+            <li>Chạy thử và hiệu chỉnh thông số</li>
+            <li>Nghiệm thu cùng khách hàng trước khi bàn giao</li>
+            <li>Máy đơn: 3–5 ngày · Dây chuyền: 7–14 ngày</li>
+          </ul>
+        </div>
+
+        <div class="service-card service-card--maintain">
+          <div class="service-card__icon">🛡️</div>
+          <h3 class="service-card__title">Bảo Trì Định Kỳ</h3>
+          <p class="service-card__desc">Chương trình bảo trì theo lịch giúp máy vận hành ổn định, phát hiện sự cố trước khi xảy ra.</p>
+          <ul class="service-card__list">
+            <li>Gói bảo trì 3 tháng / 6 tháng / 12 tháng</li>
+            <li>Kiểm tra 68 hạng mục theo checklist chuẩn</li>
+            <li>Thay thế linh kiện hao mòn đúng chu kỳ</li>
+            <li>Báo cáo tình trạng máy sau mỗi lần bảo trì</li>
+            <li>Đề xuất nâng cấp nếu phát hiện ẩn số</li>
+          </ul>
+        </div>
+
+        <div class="service-card service-card--train">
+          <div class="service-card__icon">🎓</div>
+          <h3 class="service-card__title">Đào Tạo Vận Hành</h3>
+          <p class="service-card__desc">Đào tạo trực tiếp tại xưởng, đảm bảo đội ngũ vận hành máy thành thạo, an toàn và hiệu quả.</p>
+          <ul class="service-card__list">
+            <li>Chương trình đào tạo 2 ngày tại xưởng</li>
+            <li>Tài liệu vận hành bằng tiếng Việt đầy đủ</li>
+            <li>Đào tạo xử lý sự cố thường gặp</li>
+            <li>Đào tạo lại miễn phí khi thay nhân sự (trong bảo hành)</li>
+            <li>Hỗ trợ online qua Zalo/điện thoại sau đào tạo</li>
+          </ul>
+        </div>
+
+        <div class="service-card service-card--parts">
+          <div class="service-card__icon">⚙️</div>
+          <h3 class="service-card__title">Phụ Tùng Chính Hãng</h3>
+          <p class="service-card__desc">Kho phụ tùng chính hãng tại Bắc Ninh — giao hàng nhanh toàn quốc, đảm bảo tương thích 100%.</p>
+          <ul class="service-card__list">
+            <li>Kho phụ tùng dự phòng tại Bắc Ninh</li>
+            <li>Giao hàng trong 24–48 giờ toàn quốc</li>
+            <li>Phụ tùng chính hãng, có tem xác nhận</li>
+            <li>Tư vấn chọn phụ tùng đúng model máy</li>
+            <li>Giá phụ tùng công khai, không phát sinh</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Installation Process -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section__header section__header--left">
+        <span class="section__label">QUY TRÌNH</span>
+        <h2 class="section__title section__title--left">Quy Trình Lắp Đặt Tiêu Chuẩn</h2>
+        <p class="section__lead" style="text-align:left">4 bước rõ ràng — khách hàng biết chính xác điều gì xảy ra ở từng giai đoạn</p>
+      </div>
+      <div style="max-width:720px">
+        <div class="step-install">
+          <div class="step-install__item">
+            <div class="step-install__num">1</div>
+            <div>
+              <div class="step-install__title">Khảo Sát & Tư Vấn</div>
+              <p class="step-install__desc">Kỹ sư DOWIN khảo sát mặt bằng (trực tiếp hoặc qua bản vẽ/video). Đánh giá nguồn điện, hệ thống khí nén, nền móng và không gian lắp đặt. Đề xuất model và cấu hình phù hợp nhất.</p>
+              <span class="step-install__time">1–2 ngày làm việc</span>
+            </div>
+          </div>
+          <div class="step-install__item">
+            <div class="step-install__num">2</div>
+            <div>
+              <div class="step-install__title">Ký Hợp Đồng & Chuẩn Bị</div>
+              <p class="step-install__desc">Xác nhận thông số kỹ thuật, điều khoản bảo hành và lịch giao hàng. Khách hàng chuẩn bị nền móng theo bản vẽ DOWIN cung cấp. DOWIN đặt hàng và kiểm tra chất lượng máy trước khi xuất xưởng.</p>
+              <span class="step-install__time">7–21 ngày (tùy model)</span>
+            </div>
+          </div>
+          <div class="step-install__item">
+            <div class="step-install__num">3</div>
+            <div>
+              <div class="step-install__title">Lắp Đặt & Chạy Thử</div>
+              <p class="step-install__desc">Kỹ thuật viên DOWIN lắp đặt máy, đấu điện, kết nối khí nén, cài đặt thông số PLC. Chạy thử không tải và có tải với cát thật. Hiệu chỉnh đến khi đạt năng suất và chất lượng khuôn đúng thông số.</p>
+              <span class="step-install__time">3–5 ngày (máy đơn) / 7–14 ngày (dây chuyền)</span>
+            </div>
+          </div>
+          <div class="step-install__item">
+            <div class="step-install__num">4</div>
+            <div>
+              <div class="step-install__title">Đào Tạo & Nghiệm Thu</div>
+              <p class="step-install__desc">Đào tạo đội ngũ vận hành ngay tại xưởng. Bàn giao tài liệu kỹ thuật, sơ đồ điện, hướng dẫn vận hành bằng tiếng Việt. Ký biên bản nghiệm thu và kích hoạt thời gian bảo hành 12 tháng.</p>
+              <span class="step-install__time">2 ngày đào tạo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Warranty note -->
+  <section class="section">
+    <div class="container">
+      <div style="background:var(--color-navy-50);border-radius:var(--radius-xl);padding:var(--space-10);display:grid;grid-template-columns:1fr 1fr;gap:var(--space-8);align-items:center">
+        <div>
+          <span class="section__label">CAM KẾT BẢO HÀNH</span>
+          <h2 style="font-size:var(--text-2xl);font-weight:var(--fw-extrabold);color:var(--color-navy-900);margin:var(--space-2) 0 var(--space-4)">12 Tháng Bảo Hành Toàn Diện</h2>
+          <p style="color:var(--color-gray-600);line-height:var(--leading-relaxed)">Trong thời gian bảo hành, DOWIN chịu toàn bộ chi phí nhân công và phụ tùng lỗi kỹ thuật. Thời gian phản hồi tối đa 4 giờ, có mặt tại xưởng trong vòng 24 giờ nếu cần.</p>
+        </div>
+        <div>
+          <ul style="list-style:none;padding:0;margin:0">
+            <li style="padding:var(--space-3) 0;border-bottom:1px solid var(--border-color);display:flex;gap:var(--space-3);color:var(--color-gray-700)"><span style="color:var(--color-primary);font-weight:700">✓</span> Phụ tùng lỗi kỹ thuật được thay miễn phí</li>
+            <li style="padding:var(--space-3) 0;border-bottom:1px solid var(--border-color);display:flex;gap:var(--space-3);color:var(--color-gray-700)"><span style="color:var(--color-primary);font-weight:700">✓</span> Nhân công sửa chữa hoàn toàn miễn phí</li>
+            <li style="padding:var(--space-3) 0;border-bottom:1px solid var(--border-color);display:flex;gap:var(--space-3);color:var(--color-gray-700)"><span style="color:var(--color-primary);font-weight:700">✓</span> Hotline kỹ thuật 24/7 trong suốt bảo hành</li>
+            <li style="padding:var(--space-3) 0;display:flex;gap:var(--space-3);color:var(--color-gray-700)"><span style="color:var(--color-primary);font-weight:700">✓</span> Cập nhật phần mềm PLC khi có phiên bản mới</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner cta-banner--accent">
+    <div class="container">
+      <h2 class="cta-banner__title">Cần Hỗ Trợ Kỹ Thuật?</h2>
+      <p class="cta-banner__lead">Liên hệ ngay để được tư vấn lắp đặt, đặt lịch bảo trì hoặc đặt phụ tùng chính hãng</p>
+      <div class="cta-banner__actions">
+        <a href="/contact.html" class="btn btn-primary btn-lg">Liên hệ kỹ thuật</a>
+        <a href="tel:0981422756" class="btn btn-outline btn-lg" style="color:white;border-color:rgba(255,255,255,0.6)">📞 0981 422 756</a>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <div data-include="/partials/footer.html"></div>
 <div data-include="/partials/chat-widget.html"></div>
 <div data-include="/partials/sticky-cta.html"></div>
-
 <script src="/js/include.js" defer></script>
 <script src="/js/nav.js" defer></script>
 </body>
