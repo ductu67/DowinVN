@@ -6,7 +6,7 @@
     "dev": "serve .",
     "optimize-images": "node scripts/optimize-images.js",
     "minify-css": "cleancss -o dist/css/all.min.css css/design-system.css css/components.css css/layout.css",
-    "minify-js": "terser js/include.js js/chat-widget.js js/lead-form.js js/sticky-cta.js js/scroll-top.js js/counter.js js/lazy-youtube.js js/newsletter.js js/share.js -c -m -o dist/js/all.min.js",
+    "minify-js": "terser js/include.js js/nav.js js/counter.js js/lazy-youtube.js js/gallery-zoom.js js/lightbox.js -c -m -o dist/js/all.min.js",
     "minify-html": "html-minifier-terser --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --use-short-doctype --minify-css true --minify-js true --input-dir . --output-dir dist --file-ext html",
     "build": "npm run optimize-images && npm run minify-css && npm run minify-js && npm run minify-html",
     "prebuild": "node -e \"require('fs').mkdirSync('dist/css',{recursive:true}); require('fs').mkdirSync('dist/js',{recursive:true})\""
