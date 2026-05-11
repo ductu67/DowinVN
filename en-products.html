@@ -12,7 +12,7 @@
   <meta property="og:url" content="https://dowinvietnam.com/en-products.html">
   <meta property="og:title" content="DOWIN Vietnam — Products">
   <meta property="og:description" content="Green sand molding machines and industrial casting equipment.">
-  <meta property="og:image" content="https://dowinvietnam.com/images/products/molding.jpg">
+  <meta property="og:image" content="https://dowinvietnam.com/images/products/molding.webp">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,6 +33,19 @@
     ]
   }
   </script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<link rel="alternate" hreflang="en" href="https://dowinvietnam.com/en-products.html">
+<link rel="alternate" hreflang="vi" href="https://dowinvietnam.com/products.html">
+<link rel="alternate" hreflang="x-default" href="https://dowinvietnam.com/products.html">
 </head>
 <body>
 
@@ -62,17 +75,17 @@
 
 <div class="products">
   <div class="product-card">
-    <img src="images/products/molding.jpg" alt="Green sand molding machine" width="600" height="400" loading="lazy" decoding="async">
+    <img src="images/products/molding.webp" alt="Green sand molding machine" width="600" height="400" loading="lazy" decoding="async">
     <h3>Green Sand Molding Machine</h3>
     <a href="en-product-detail.html" class="btn btn-outline">View Details</a>
   </div>
   <div class="product-card">
-    <img src="images/products/mixer.jpg" alt="Industrial sand mixer" width="600" height="400" loading="lazy" decoding="async">
+    <img src="images/products/mixer.webp" alt="Industrial sand mixer" width="600" height="400" loading="lazy" decoding="async">
     <h3>Sand Mixer</h3>
     <a href="en-product-detail.html" class="btn btn-outline">View Details</a>
   </div>
   <div class="product-card">
-    <img src="images/products/line.jpg" alt="Casting production line" width="600" height="400" loading="lazy" decoding="async">
+    <img src="images/products/line.webp" alt="Casting production line" width="600" height="400" loading="lazy" decoding="async">
     <h3>Casting Production Line</h3>
     <a href="en-product-detail.html" class="btn btn-outline">View Details</a>
   </div>
@@ -81,12 +94,12 @@
 <div class="project-section">
   <h2 class="section-title">Our Projects</h2>
   <div class="project-gallery">
-    <img src="images/projects/project1.jpg" alt="Foundry project installation 1" width="400" height="300" loading="lazy" decoding="async">
-    <img src="images/projects/project2.jpg" alt="Foundry project installation 2" width="400" height="300" loading="lazy" decoding="async">
-    <img src="images/projects/project3.jpg" alt="Foundry project installation 3" width="400" height="300" loading="lazy" decoding="async">
-    <img src="images/projects/project4.jpg" alt="Foundry project installation 4" width="400" height="300" loading="lazy" decoding="async">
-    <img src="images/projects/project5.jpg" alt="Foundry project installation 5" width="400" height="300" loading="lazy" decoding="async">
-    <img src="images/projects/project6.jpg" alt="Foundry project installation 6" width="400" height="300" loading="lazy" decoding="async">
+    <img src="images/projects/project1.webp" alt="Foundry project installation 1" width="400" height="300" loading="lazy" decoding="async">
+    <img src="images/projects/project2.webp" alt="Foundry project installation 2" width="400" height="300" loading="lazy" decoding="async">
+    <img src="images/projects/project3.webp" alt="Foundry project installation 3" width="400" height="300" loading="lazy" decoding="async">
+    <img src="images/projects/project4.webp" alt="Foundry project installation 4" width="400" height="300" loading="lazy" decoding="async">
+    <img src="images/projects/project5.webp" alt="Foundry project installation 5" width="400" height="300" loading="lazy" decoding="async">
+    <img src="images/projects/project6.webp" alt="Foundry project installation 6" width="400" height="300" loading="lazy" decoding="async">
   </div>
 </div>
 </main>
@@ -98,7 +111,7 @@
       <p>Professional manufacturer of green sand molding machines, auxiliary equipment and casting production lines.</p>
       <div class="social">
         <a href="#" aria-label="Website">🌐</a>
-        <a href="https://www.facebook.com/profile.php?id=61563358184241" target="_blank" rel="noopener noreferrer" aria-label="Facebook">📘</a>
+        <a href="https://www.facebook.com/people/Dowinvietnam/61578386100164/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">📘</a>
         <a href="#" aria-label="Video">▶</a>
       </div>
     </div>
@@ -177,5 +190,88 @@
   initLightbox("imageModal", closeModal);
 </script>
 
+
+<!-- Floating Contact & Scroll to Top -->
+<div class="floating-contact">
+    <a href="https://zalo.me/0981422756" class="float-btn zalo-btn" title="Chat Zalo">
+        Zalo
+    </a>
+    <a href="tel:0981422756" class="float-btn phone-btn" title="Gọi điện">
+        📞
+    </a>
+</div>
+<button id="scrollToTopBtn" class="scroll-top-btn" title="Lên đầu trang">⬆</button>
+
+<style>
+.floating-contact {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 9999;
+}
+.float-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+.float-btn:hover {
+    transform: scale(1.1);
+}
+.zalo-btn {
+    background-color: #0068ff;
+    color: white;
+}
+.phone-btn {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 24px;
+}
+.scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    background: rgba(13, 42, 82, 0.8);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    z-index: 9999;
+}
+.scroll-top-btn:hover {
+    background: #2c5aa0;
+}
+@media (max-width: 768px) {
+    .floating-contact { bottom: 70px; left: 10px; }
+    .scroll-top-btn { bottom: 70px; right: 10px; }
+}
+</style>
+<script>
+window.addEventListener('scroll', function() {
+    var scrollBtn = document.getElementById('scrollToTopBtn');
+    if (window.scrollY > 300) {
+        scrollBtn.style.display = 'block';
+    } else {
+        scrollBtn.style.display = 'none';
+    }
+});
+document.getElementById('scrollToTopBtn').addEventListener('click', function() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+});
+</script>
 </body>
 </html>

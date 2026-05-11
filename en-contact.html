@@ -12,7 +12,7 @@
   <meta property="og:url" content="https://dowinvietnam.com/en-contact.html">
   <meta property="og:title" content="Contact DOWIN Vietnam">
   <meta property="og:description" content="Official contact channels for foundry equipment inquiries.">
-  <meta property="og:image" content="https://dowinvietnam.com/images/contact-banner.jpg">
+  <meta property="og:image" content="https://dowinvietnam.com/images/contact-banner.webp">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,6 +21,19 @@
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/contacts.css">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<link rel="alternate" hreflang="en" href="https://dowinvietnam.com/en-contact.html">
+<link rel="alternate" hreflang="vi" href="https://dowinvietnam.com/contact.html">
+<link rel="alternate" hreflang="x-default" href="https://dowinvietnam.com/contact.html">
 </head>
 <body>
 
@@ -54,7 +67,7 @@
     <section class="contact-hero">
 
         
-    <img src="images/contact-banner.jpg"
+    <img src="images/contact-banner.webp"
          class="banner-img"
          alt="DOWIN Vietnam contact and office"
          width="1600"
@@ -127,7 +140,7 @@
                 <!-- RIGHT -->
                 <div class="contact-right">
 
-                    <img src="images/banner.jpg" alt="DOWIN casting equipment" width="1200" height="400" loading="lazy" decoding="async">
+                    <img src="images/banner.webp" alt="DOWIN casting equipment" width="1200" height="400" loading="lazy" decoding="async">
 
                 </div>
 
@@ -234,7 +247,7 @@
 
       <div class="social">
         <a href="#">🌐</a>
-        <a href="https://www.facebook.com/profile.php?id=61563358184241" target="_blank" rel="noopener noreferrer" aria-label="Facebook">📘</a>
+        <a href="https://www.facebook.com/people/Dowinvietnam/61578386100164/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">📘</a>
         <a href="#">▶</a>
       </div>
     </div>
@@ -270,5 +283,88 @@
 </footer>
 
 <script src="js/nav.js" defer></script>
+
+<!-- Floating Contact & Scroll to Top -->
+<div class="floating-contact">
+    <a href="https://zalo.me/0981422756" class="float-btn zalo-btn" title="Chat Zalo">
+        Zalo
+    </a>
+    <a href="tel:0981422756" class="float-btn phone-btn" title="Gọi điện">
+        📞
+    </a>
+</div>
+<button id="scrollToTopBtn" class="scroll-top-btn" title="Lên đầu trang">⬆</button>
+
+<style>
+.floating-contact {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 9999;
+}
+.float-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+.float-btn:hover {
+    transform: scale(1.1);
+}
+.zalo-btn {
+    background-color: #0068ff;
+    color: white;
+}
+.phone-btn {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 24px;
+}
+.scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    background: rgba(13, 42, 82, 0.8);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    z-index: 9999;
+}
+.scroll-top-btn:hover {
+    background: #2c5aa0;
+}
+@media (max-width: 768px) {
+    .floating-contact { bottom: 70px; left: 10px; }
+    .scroll-top-btn { bottom: 70px; right: 10px; }
+}
+</style>
+<script>
+window.addEventListener('scroll', function() {
+    var scrollBtn = document.getElementById('scrollToTopBtn');
+    if (window.scrollY > 300) {
+        scrollBtn.style.display = 'block';
+    } else {
+        scrollBtn.style.display = 'none';
+    }
+});
+document.getElementById('scrollToTopBtn').addEventListener('click', function() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+});
+</script>
 </body>
 </html>

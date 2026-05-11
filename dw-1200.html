@@ -58,7 +58,6 @@
         </a>
         <nav id="site-nav" class="site-nav" aria-label="Điều hướng chính">
             <a href="index.html">Trang chủ</a>
-    <a href="about.html">Giới thiệu</a>
             <a href="products.html" class="active">Các sản phẩm</a>
             <a href="projects.html">Giải pháp</a>
             <a href="contact.html">Liên hệ</a>
@@ -736,7 +735,64 @@
 </div>
 <button id="scrollToTopBtn" class="scroll-top-btn" title="Lên đầu trang">⬆</button>
 
-
+<style>
+.floating-contact {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 9999;
+}
+.float-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+.float-btn:hover {
+    transform: scale(1.1);
+}
+.zalo-btn {
+    background-color: #0068ff;
+    color: white;
+}
+.phone-btn {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 24px;
+}
+.scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    background: rgba(13, 42, 82, 0.8);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    z-index: 9999;
+}
+.scroll-top-btn:hover {
+    background: #2c5aa0;
+}
+@media (max-width: 768px) {
+    .floating-contact { bottom: 70px; left: 10px; }
+    .scroll-top-btn { bottom: 70px; right: 10px; }
+}
+</style>
 <script>
 window.addEventListener('scroll', function() {
     var scrollBtn = document.getElementById('scrollToTopBtn');
@@ -751,12 +807,13 @@ document.getElementById('scrollToTopBtn').addEventListener('click', function() {
 });
 </script>
 
-<!-- Sticky Mobile CTA Bar -->
-<div class="sticky-mobile-cta">
-    <a href="https://zalo.me/0981422756" class="cta-zalo">💬 Chat Zalo</a>
-    <a href="tel:0981422756" class="cta-phone">📞 Gọi ngay</a>
-</div>
-
+        <script>
+            window.addEventListener('DOMContentLoaded', () => {
+                const btn = document.querySelector('.machine-btn[onclick*="dw1200"]');
+                if(btn) btn.click();
+            });
+        </script>
+        
 </body>
 
 </html>

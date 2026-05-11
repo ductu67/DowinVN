@@ -877,3 +877,159 @@ button:focus-visible {
     opacity: 0.95;
   }
 }
+
+/* ===== FLOATING CONTACT BUTTONS ===== */
+.floating-contact {
+    position: fixed;
+    bottom: 24px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.float-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.float-btn:hover {
+    transform: scale(1.12);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+.zalo-btn {
+    background: linear-gradient(135deg, #0068ff, #0044cc);
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+.phone-btn {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    font-size: 22px;
+}
+
+/* ===== SCROLL TO TOP ===== */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 20px;
+    width: 46px;
+    height: 46px;
+    background: rgba(13, 42, 82, 0.85);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    z-index: 9999;
+    transition: background 0.3s ease, transform 0.2s ease;
+    backdrop-filter: blur(6px);
+}
+
+.scroll-top-btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+/* ===== STICKY MOBILE CTA BAR ===== */
+.sticky-mobile-cta {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9998;
+    background: var(--primary-color);
+    padding: 10px 16px;
+    gap: 10px;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.25);
+}
+
+.sticky-mobile-cta a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.sticky-mobile-cta .cta-zalo {
+    background: #0068ff;
+    color: white;
+}
+
+.sticky-mobile-cta .cta-phone {
+    background: #22c55e;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .floating-contact {
+        bottom: 80px;
+        left: 10px;
+    }
+    .scroll-top-btn {
+        bottom: 80px;
+        right: 10px;
+    }
+    .sticky-mobile-cta {
+        display: flex;
+    }
+}
+
+/* ===== QUOTE FORM (shared) ===== */
+.quote-form-container {
+    background: var(--white);
+    padding: 32px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    height: 100%;
+}
+
+.quote-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.quote-form input,
+.quote-form select,
+.quote-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 15px;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    background: #f8fafc;
+}
+
+.quote-form input:focus,
+.quote-form select:focus,
+.quote-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+    background: white;
+}

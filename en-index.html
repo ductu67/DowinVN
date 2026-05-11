@@ -12,13 +12,13 @@
 <meta property="og:url" content="https://dowinvietnam.com/en-index.html">
 <meta property="og:title" content="DOWIN Vietnam | Industrial casting machinery">
 <meta property="og:description" content="Green sand molding machines, casting production lines and factory automation solutions.">
-<meta property="og:image" content="https://dowinvietnam.com/images/banner.jpg">
+<meta property="og:image" content="https://dowinvietnam.com/images/banner.webp">
 <meta property="og:locale" content="en_US">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="DOWIN Vietnam | Industrial casting machinery">
 <meta name="twitter:description" content="Green sand molding machines and casting production lines.">
-<meta name="twitter:image" content="https://dowinvietnam.com/images/banner.jpg">
+<meta name="twitter:image" content="https://dowinvietnam.com/images/banner.webp">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,6 +45,19 @@
   "email": "Dowinvietnam@gmail.com"
 }
 </script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<link rel="alternate" hreflang="en" href="https://dowinvietnam.com/en-index.html">
+<link rel="alternate" hreflang="vi" href="https://dowinvietnam.com/index.html">
+<link rel="alternate" hreflang="x-default" href="https://dowinvietnam.com/index.html">
 </head>
 
 <body>
@@ -92,7 +105,7 @@
   <h2 id="cat-heading" class="visually-hidden">Product categories</h2>
   <div class="card">
     <div class="card-img-wrapper">
-      <img src="images/m1.jpg" alt="Green sand molding machine in a foundry" width="800" height="500" loading="lazy" decoding="async">
+      <img src="images/m1.webp" alt="Green sand molding machine in a foundry" width="800" height="500" loading="lazy" decoding="async">
     </div>
     <div class="card-content">
       <div class="card-title">Green Sand Molding Machine</div>
@@ -101,7 +114,7 @@
   </div>
   <div class="card">
     <div class="card-img-wrapper">
-      <img src="images/m2.jpg" alt="Auxiliary foundry equipment" width="800" height="500" loading="lazy" decoding="async">
+      <img src="images/m2.webp" alt="Auxiliary foundry equipment" width="800" height="500" loading="lazy" decoding="async">
     </div>
     <div class="card-content">
       <div class="card-title">Auxiliary Equipment</div>
@@ -110,7 +123,7 @@
   </div>
   <div class="card">
     <div class="card-img-wrapper">
-      <img src="images/m3.jpg" alt="Automated casting production line" width="800" height="500" loading="lazy" decoding="async">
+      <img src="images/m3.webp" alt="Automated casting production line" width="800" height="500" loading="lazy" decoding="async">
     </div>
     <div class="card-content">
       <div class="card-title">Production Line</div>
@@ -184,7 +197,7 @@
       <p>Professional manufacturer of green sand molding machines, auxiliary equipment and casting production lines.</p>
       <div class="social">
         <a href="#" aria-label="Website">🌐</a>
-        <a href="https://www.facebook.com/profile.php?id=61563358184241" target="_blank" rel="noopener noreferrer" aria-label="Facebook">📘</a>
+        <a href="https://www.facebook.com/people/Dowinvietnam/61578386100164/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">📘</a>
         <a href="#" aria-label="Video">▶</a>
       </div>
     </div>
@@ -212,5 +225,88 @@
 </footer>
 
 <script src="js/nav.js" defer></script>
+
+<!-- Floating Contact & Scroll to Top -->
+<div class="floating-contact">
+    <a href="https://zalo.me/0981422756" class="float-btn zalo-btn" title="Chat Zalo">
+        Zalo
+    </a>
+    <a href="tel:0981422756" class="float-btn phone-btn" title="Gọi điện">
+        📞
+    </a>
+</div>
+<button id="scrollToTopBtn" class="scroll-top-btn" title="Lên đầu trang">⬆</button>
+
+<style>
+.floating-contact {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 9999;
+}
+.float-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+.float-btn:hover {
+    transform: scale(1.1);
+}
+.zalo-btn {
+    background-color: #0068ff;
+    color: white;
+}
+.phone-btn {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 24px;
+}
+.scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    background: rgba(13, 42, 82, 0.8);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    z-index: 9999;
+}
+.scroll-top-btn:hover {
+    background: #2c5aa0;
+}
+@media (max-width: 768px) {
+    .floating-contact { bottom: 70px; left: 10px; }
+    .scroll-top-btn { bottom: 70px; right: 10px; }
+}
+</style>
+<script>
+window.addEventListener('scroll', function() {
+    var scrollBtn = document.getElementById('scrollToTopBtn');
+    if (window.scrollY > 300) {
+        scrollBtn.style.display = 'block';
+    } else {
+        scrollBtn.style.display = 'none';
+    }
+});
+document.getElementById('scrollToTopBtn').addEventListener('click', function() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+});
+</script>
 </body>
 </html>

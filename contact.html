@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 
 <head>
@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://dowinvietnam.com/contact.html">
     <meta property="og:title" content="Liên hệ DOWIN Việt Nam">
     <meta property="og:description" content="Kênh liên hệ chính thức — tư vấn kỹ thuật và báo giá thiết bị đúc.">
-    <meta property="og:image" content="https://dowinvietnam.com/images/contact-banner.jpg">
+    <meta property="og:image" content="https://dowinvietnam.com/images/contact-banner.webp">
     <meta name="twitter:card" content="summary_large_image">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,6 +22,19 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contacts.css">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<link rel="alternate" hreflang="vi" href="https://dowinvietnam.com/contact.html">
+<link rel="alternate" hreflang="en" href="https://dowinvietnam.com/en-contact.html">
+<link rel="alternate" hreflang="x-default" href="https://dowinvietnam.com/contact.html">
 </head>
 
 <body>
@@ -33,6 +46,7 @@
         </a>
         <nav id="site-nav" class="site-nav" aria-label="Điều hướng chính">
             <a href="index.html">Trang chủ</a>
+    <a href="about.html">Giới thiệu</a>
             <div class="dropdown">
                 <a href="products.html" class="dropbtn">Các sản phẩm</a>
                 <div class="dropdown-content">
@@ -56,7 +70,7 @@
     <section class="contact-hero">
 
 
-        <img src="images/contact-banner.jpg" class="banner-img" alt="Văn phòng và liên hệ DOWIN Việt Nam" width="1600" height="400" loading="eager" decoding="async">
+        <img src="images/contact-banner.webp" class="banner-img" alt="Văn phòng và liên hệ DOWIN Việt Nam" width="1600" height="400" loading="eager" decoding="async">
 
         <div class="overlay"></div>
 
@@ -120,9 +134,25 @@
 
                 <!-- RIGHT -->
                 <div class="contact-right">
-
-                    <img src="images/banner.jpg" alt="Thiết bị đúc DOWIN" width="1200" height="400" loading="lazy" decoding="async">
-
+                    <div class="quote-form-container">
+                        <h3 style="font-size: 24px; color: #0d2a52; margin-bottom: 20px;">Nhận Báo Giá Miễn Phí</h3>
+                        <form action="#" method="POST" class="quote-form">
+                            <input type="text" name="name" placeholder="Họ và tên *" required>
+                            <input type="tel" name="phone" placeholder="Số điện thoại *" required>
+                            <input type="email" name="email" placeholder="Email">
+                            <select name="product" required>
+                                <option value="" disabled selected>Chọn sản phẩm quan tâm *</option>
+                                <option value="dw1000">Máy ép khuôn cát DW-1000</option>
+                                <option value="dw1200">Máy ép khuôn cát DW-1200</option>
+                                <option value="dw1600">Máy ép khuôn cát DW-1600</option>
+                                <option value="mixer">Máy trộn cát</option>
+                                <option value="line">Dây chuyền sản xuất đúc</option>
+                                <option value="other">Thiết bị khác</option>
+                            </select>
+                            <textarea name="message" rows="4" placeholder="Yêu cầu chi tiết..."></textarea>
+                            <button type="submit" class="btn" style="width: 100%; border-radius: 8px;">Gửi yêu cầu báo giá</button>
+                        </form>
+                    </div>
                 </div>
 
             </div>
@@ -136,24 +166,21 @@
                 <!-- BOX 1 -->
                 <div class="contact-box">
 
-                    <h3>☎ Inquiry phone</h3>
+                    <h3>☎ Điện thoại tư vấn</h3>
 
                     <p>
-                        Shandong, Henan,
-                        and North China region:
-                        0312-3209001
+                        Khu vực miền Bắc:
+                        0981-422-756
                     </p>
 
                     <p>
-                        Northeast, East China,
-                        and Southeast regions:
-                        0312-3209002
+                        Khu vực miền Trung:
+                        0981-422-756
                     </p>
 
                     <p>
-                        Central-South, Southwest,
-                        and Northwest regions:
-                        0312-3209003
+                        Khu vực miền Nam:
+                        0981-422-756
                     </p>
 
                 </div>
@@ -163,26 +190,21 @@
                 <!-- BOX 2 -->
                 <div class="contact-box">
 
-                    <h3>🧾 Service phone</h3>
+                    <h3>🧾 Điện thoại dịch vụ</h3>
 
                     <p>
-                        Wei'er Service Office:
-                        0312-3209044
+                        Hỗ trợ kỹ thuật:
+                        0981-422-756
                     </p>
 
                     <p>
-                        Shandong Office:
-                        13785250585
+                        Bảo hành & bảo trì:
+                        0981-422-756
                     </p>
 
                     <p>
-                        Shanxi Office:
-                        13831258703
-                    </p>
-
-                    <p>
-                        Anhui Office:
-                        13830124546
+                        Góp ý & Khiếu nại:
+                        0826-275-468
                     </p>
 
                 </div>
@@ -192,17 +214,16 @@
                 <!-- BOX 3 -->
                 <div class="contact-box">
 
-                    <h3>⚙ Spare Parts Sales Hotline</h3>
+                    <h3>⚙ Hotline phụ tùng</h3>
 
                     <p>
-                        Landline:
-                        0312-3209144
+                        Kinh doanh phụ tùng:
+                        0981-422-756
                     </p>
 
                     <p>
-                        Mobile phones:
-                        13832215597 /
-                        13473230923
+                        Hotline Zalo:
+                        0981-422-756
                     </p>
 
                 </div>
@@ -226,9 +247,9 @@
                 </p>
 
                 <div class="social">
-                    <a href="#">🌐</a>
-                    <a href="https://www.facebook.com/profile.php?id=61563358184241" target="_blank" rel="noopener noreferrer" aria-label="Facebook">📘</a>
-                    <a href="#">▶</a>
+                    <a href="https://dowinvietnam.com">🌐</a>
+                    <a href="https://www.facebook.com/people/Dowinvietnam/61578386100164/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">📘</a>
+                    <a href="https://www.youtube.com">▶</a>
                 </div>
             </div>
 
@@ -263,6 +284,39 @@
     </footer>
 
 <script src="js/nav.js" defer></script>
+
+<!-- Floating Contact & Scroll to Top -->
+<div class="floating-contact">
+    <a href="https://zalo.me/0981422756" class="float-btn zalo-btn" title="Chat Zalo">
+        Zalo
+    </a>
+    <a href="tel:0981422756" class="float-btn phone-btn" title="Gọi điện">
+        📞
+    </a>
+</div>
+<button id="scrollToTopBtn" class="scroll-top-btn" title="Lên đầu trang">⬆</button>
+
+
+<script>
+window.addEventListener('scroll', function() {
+    var scrollBtn = document.getElementById('scrollToTopBtn');
+    if (window.scrollY > 300) {
+        scrollBtn.style.display = 'block';
+    } else {
+        scrollBtn.style.display = 'none';
+    }
+});
+document.getElementById('scrollToTopBtn').addEventListener('click', function() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+});
+</script>
+
+<!-- Sticky Mobile CTA Bar -->
+<div class="sticky-mobile-cta">
+    <a href="https://zalo.me/0981422756" class="cta-zalo">💬 Chat Zalo</a>
+    <a href="tel:0981422756" class="cta-phone">📞 Gọi ngay</a>
+</div>
+
 </body>
 
 </html>
