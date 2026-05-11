@@ -398,7 +398,7 @@
         rgba(13, 42, 82, 0.88),
         rgba(44, 90, 160, 0.78)
     ),
-    url("../images/banner.jpg");
+    url("../images/banner.webp");
 
     background-size: cover;
     background-position: center;
