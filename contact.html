@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
@@ -24,6 +24,9 @@
 <link rel="stylesheet" href="/css/components.css">
 <link rel="stylesheet" href="/css/layout.css">
 <!-- Google Analytics (placeholder — replace G-4PEGC34ZDT with real ID) -->
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PEGC34ZDT"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4PEGC34ZDT');</script>
 <!-- Schema.org Organization -->
@@ -152,5 +155,92 @@
 
 <script src="/js/include.js" defer></script>
 <script src="/js/nav.js" defer></script>
+<script>
+(function () {
+  'use strict';
+
+  var form = document.getElementById('contactForm');
+  if (!form) return;
+
+  function showError(input, msg) {
+    clearError(input);
+    var err = document.createElement('p');
+    err.className = 'form-error';
+    err.setAttribute('role', 'alert');
+    err.style.cssText = 'color:var(--color-error,#DC2626);font-size:0.75rem;margin-top:4px';
+    err.textContent = msg;
+    input.parentNode.appendChild(err);
+    input.setAttribute('aria-invalid', 'true');
+  }
+
+  function clearError(input) {
+    var prev = input.parentNode.querySelector('.form-error');
+    if (prev) prev.remove();
+    input.removeAttribute('aria-invalid');
+  }
+
+  function validate() {
+    var ok = true;
+    var name = form.querySelector('#name');
+    var phone = form.querySelector('#phone');
+    var email = form.querySelector('#email');
+
+    clearError(name); clearError(phone); clearError(email);
+
+    if (!name.value.trim() || name.value.trim().length < 2) {
+      showError(name, 'Vui lòng nhập họ tên (ít nhất 2 ký tự)');
+      ok = false;
+    }
+    if (!phone.value.trim() || !/^(\+84|0)[0-9]{9,10}$/.test(phone.value.trim().replace(/\s/g, ''))) {
+      showError(phone, 'Số điện thoại không hợp lệ (VD: 0912 345 678)');
+      ok = false;
+    }
+    if (email.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+      showError(email, 'Email không hợp lệ');
+      ok = false;
+    }
+    return ok;
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!validate()) return;
+
+    var btn = form.querySelector('[type="submit"]');
+    var orig = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Đang gửi…';
+
+    var data = new FormData(form);
+    fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(function (res) {
+      if (res.ok) {
+        window.location.href = '/thank-you.html';
+      } else {
+        return res.json().then(function (json) {
+          throw new Error(json.error || 'Lỗi server');
+        });
+      }
+    })
+    .catch(function () {
+      btn.disabled = false;
+      btn.textContent = orig;
+      var errBox = form.querySelector('.form-submit-error');
+      if (!errBox) {
+        errBox = document.createElement('p');
+        errBox.className = 'form-submit-error';
+        errBox.setAttribute('role', 'alert');
+        errBox.style.cssText = 'color:var(--color-error,#DC2626);font-size:0.875rem;margin-top:8px;text-align:center';
+        form.querySelector('.form-actions').after(errBox);
+      }
+      errBox.textContent = 'Gửi thất bại. Vui lòng thử lại hoặc gọi 0981 422 756.';
+    });
+  });
+})();
+</script>
 </body>
 </html>
