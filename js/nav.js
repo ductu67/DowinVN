@@ -37,6 +37,7 @@
       overlay.classList.remove('is-open');
       overlay.setAttribute('aria-hidden', 'true');
     }
+    document.body.classList.remove('mobile-nav-open');
 
     // Close all dropdowns too
     document.querySelectorAll('.nav-dropdown.is-open').forEach(function (dd) {
@@ -79,6 +80,11 @@
       var willOpen = !nav.classList.contains('is-open');
       nav.classList.toggle('is-open', willOpen);
       toggle.setAttribute('aria-expanded', String(willOpen));
+      if (willOpen) {
+        document.body.classList.add('mobile-nav-open');
+      } else {
+        document.body.classList.remove('mobile-nav-open');
+      }
 
       if (overlay) {
         overlay.classList.toggle('is-open', willOpen);
