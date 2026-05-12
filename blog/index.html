@@ -48,6 +48,13 @@
 .blog-card__title a:hover { color:var(--color-navy-700); }
 .blog-card__excerpt { font-size:var(--text-sm);color:var(--color-gray-600);line-height:var(--leading-relaxed);flex:1;margin-bottom:var(--space-4); }
 .blog-card__meta { display:flex;gap:var(--space-4);font-size:var(--text-xs);color:var(--color-gray-400); }
+
+.blog-search-wrap { position:relative;margin-bottom:var(--space-5); }
+.blog-search-input { width:100%;padding:10px 16px 10px 42px;border:1.5px solid var(--border-color);border-radius:24px;font-size:var(--text-sm);color:var(--color-gray-900);background:var(--color-white);outline:none;transition:border-color var(--transition-fast); }
+.blog-search-input:focus { border-color:var(--color-navy-700); }
+.blog-search-icon { position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--color-gray-400);pointer-events:none; }
+.blog-empty { display:none;text-align:center;padding:var(--space-12) 0;color:var(--color-gray-400);font-size:var(--text-sm); }
+.blog-empty.is-visible { display:block; }
 </style>
 </head>
 <body class="page-body" data-include-page="blog">
@@ -73,6 +80,12 @@
   <section class="section">
     <div class="container">
 
+      <!-- Search -->
+      <div class="blog-search-wrap">
+        <svg class="blog-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input class="blog-search-input" id="blogSearch" type="search" placeholder="Tìm kiếm bài viết..." aria-label="Tìm kiếm bài viết">
+      </div>
+
       <!-- Filters -->
       <div class="blog-filters" role="group" aria-label="Lọc bài viết">
         <button class="blog-filter-btn is-active" data-filter="all">Tất cả</button>
@@ -80,6 +93,9 @@
         <button class="blog-filter-btn" data-filter="case-study">Case Study</button>
         <button class="blog-filter-btn" data-filter="news">Tin tức</button>
       </div>
+
+      <!-- Empty state -->
+      <p class="blog-empty" id="blogEmpty">Không tìm thấy bài viết nào phù hợp.</p>
 
       <!-- Articles grid -->
       <div class="card-grid card-grid--3" id="blog-grid">
@@ -199,16 +215,45 @@
 <script src="/js/nav.js" defer></script>
 <script>
 (function () {
+  var activeFilter = 'all';
+  var searchQuery = '';
+  var debounceTimer;
+
+  function applyFilters() {
+    var cards = document.querySelectorAll('#blog-grid .blog-card');
+    var visible = 0;
+    cards.forEach(function (card) {
+      var catMatch = activeFilter === 'all' || card.dataset.cat === activeFilter;
+      var title = (card.querySelector('.blog-card__title') || {}).textContent || '';
+      var excerpt = (card.querySelector('.blog-card__excerpt') || {}).textContent || '';
+      var kwMatch = !searchQuery || (title + ' ' + excerpt).toLowerCase().indexOf(searchQuery) !== -1;
+      var show = catMatch && kwMatch;
+      card.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+    var empty = document.getElementById('blogEmpty');
+    if (empty) empty.classList.toggle('is-visible', visible === 0);
+  }
+
   document.querySelectorAll('.blog-filter-btn').forEach(function (btn) {
     btn.addEventListener('click', function () {
       document.querySelectorAll('.blog-filter-btn').forEach(function (b) { b.classList.remove('is-active'); });
       btn.classList.add('is-active');
-      var filter = btn.dataset.filter;
-      document.querySelectorAll('#blog-grid .blog-card').forEach(function (card) {
-        card.style.display = (filter === 'all' || card.dataset.cat === filter) ? '' : 'none';
-      });
+      activeFilter = btn.dataset.filter;
+      applyFilters();
     });
   });
+
+  var searchInput = document.getElementById('blogSearch');
+  if (searchInput) {
+    searchInput.addEventListener('input', function () {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(function () {
+        searchQuery = searchInput.value.trim().toLowerCase();
+        applyFilters();
+      }, 200);
+    });
+  }
 })();
 </script>
 </body>

@@ -1,3 +1,10 @@
+<!-- Back-to-top (all viewports) -->
+<button id="scrollToTop" class="scroll-to-top-btn" type="button" aria-label="Cuộn lên đầu trang">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+
 <div class="sticky-mobile-cta" id="stickyMobileCta" aria-label="Liên hệ nhanh di động">
 
   <!-- Gọi ngay -->
@@ -29,6 +36,47 @@
 </div>
 
 <style>
+/* Back-to-top button */
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 96px; /* above chat widget: 24px + 56px height + 16px gap */
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-navy-700, #1E3A5F);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  z-index: 1040;
+  box-shadow: 0 4px 14px rgba(10, 31, 68, 0.22);
+}
+.scroll-to-top-btn.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.scroll-to-top-btn:hover {
+  transform: translateY(-3px);
+  background: var(--color-navy-900, #0A1F44);
+}
+
+@media (max-width: 768px) {
+  /* Mobile: left side, above sticky CTA bar (~56px) */
+  .scroll-to-top-btn {
+    bottom: 68px;
+    right: auto;
+    left: 16px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
 /* ============================================================
    Sticky Mobile CTA Bar — DOWIN Việt Nam v2.0
    Visible only on mobile (≤768px). Hidden on desktop via CSS.

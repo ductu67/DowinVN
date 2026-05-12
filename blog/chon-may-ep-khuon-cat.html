@@ -39,15 +39,45 @@
 .prose li { margin-bottom:var(--space-2); }
 .prose strong { color:var(--color-navy-900); }
 .prose blockquote { border-left:4px solid var(--color-accent-500);padding:var(--space-4) var(--space-6);background:var(--color-gray-50);border-radius:0 var(--radius-md) var(--radius-md) 0;margin:var(--space-6) 0;font-style:italic;color:var(--color-gray-600); }
-.tip-box { background:var(--color-navy-50);border-left:4px solid var(--color-primary);padding:var(--space-5);border-radius:0 var(--radius-md) var(--radius-md) 0;margin:var(--space-6) 0; }
+.tip-box { background:var(--color-navy-50);border-left:4px solid var(--color-navy-700);padding:var(--space-5);border-radius:0 var(--radius-md) var(--radius-md) 0;margin:var(--space-6) 0; }
 .tip-box p { margin:0;font-size:var(--text-sm);color:var(--color-navy-800); }
 .num-heading { display:flex;align-items:center;gap:var(--space-4);margin:var(--space-10) 0 var(--space-4); }
-.num-heading__num { width:40px;height:40px;border-radius:50%;background:var(--color-primary);color:white;font-weight:var(--fw-extrabold);font-size:var(--text-lg);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:var(--font-display); }
+.num-heading__num { width:40px;height:40px;border-radius:50%;background:var(--color-navy-700);color:white;font-weight:var(--fw-extrabold);font-size:var(--text-lg);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:var(--font-display); }
 .num-heading__text { font-size:var(--text-2xl);font-weight:var(--fw-bold);color:var(--color-navy-900); }
 .article-hero-img { width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:var(--radius-xl);margin-bottom:var(--space-8);display:block; }
 .article-meta { display:flex;gap:var(--space-5);font-size:var(--text-sm);color:var(--color-gray-500);margin-bottom:var(--space-8);flex-wrap:wrap; }
 </style>
-</head>
+<style>
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: var(--color-accent-500, #F97316);
+  z-index: 2000;
+  transition: width 0.1s linear;
+}
+</style>
+<div class="reading-progress" id="readingProgress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Tiến độ đọc bài"></div>
+<script>
+(function(){
+  var bar = document.getElementById('readingProgress');
+  if (!bar) return;
+  var raf;
+  window.addEventListener('scroll', function() {
+    if (raf) return;
+    raf = requestAnimationFrame(function() {
+      var scrolled = window.scrollY;
+      var total = document.documentElement.scrollHeight - window.innerHeight;
+      var pct = total > 0 ? Math.min(100, (scrolled / total) * 100) : 0;
+      bar.style.width = pct + '%';
+      bar.setAttribute('aria-valuenow', Math.round(pct));
+      raf = null;
+    });
+  }, { passive: true });
+})();
+</script></head>
 <body class="page-body" data-include-page="blog">
 <div data-include="/partials/header.html"></div>
 <main>
@@ -114,7 +144,7 @@
           <li>✓ Năng suất máy lớn hơn nhu cầu ít nhất 25%</li>
         </ul>
 
-        <div class="tip-box"><p><strong>Cần tư vấn chọn máy phù hợp?</strong> Kỹ sư DOWIN sẵn sàng phân tích yêu cầu cụ thể của xưởng bạn và đề xuất model tối ưu — hoàn toàn miễn phí. <a href="/contact.html" style="color:var(--color-primary);font-weight:600">Đặt lịch tư vấn →</a></p></div>
+        <div class="tip-box"><p><strong>Cần tư vấn chọn máy phù hợp?</strong> Kỹ sư DOWIN sẵn sàng phân tích yêu cầu cụ thể của xưởng bạn và đề xuất model tối ưu — hoàn toàn miễn phí. <a href="/contact.html" style="color:var(--color-navy-700);font-weight:600">Đặt lịch tư vấn →</a></p></div>
       </div>
 
       <div style="max-width:720px;margin:var(--space-12) auto 0">

@@ -42,14 +42,44 @@
 
 .result-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--space-4); margin: var(--space-8) 0; }
 .result-card { text-align: center; background: var(--color-navy-50); border-radius: var(--radius-xl); padding: var(--space-6); }
-.result-card__num { font-size: var(--text-3xl); font-weight: var(--fw-extrabold); color: var(--color-primary); font-family: var(--font-display); line-height: 1; }
+.result-card__num { font-size: var(--text-3xl); font-weight: var(--fw-extrabold); color: var(--color-navy-700); font-family: var(--font-display); line-height: 1; }
 .result-card__label { font-size: var(--text-sm); color: var(--color-gray-600); margin-top: var(--space-2); }
 @media (max-width: 600px) { .result-grid { grid-template-columns: 1fr 1fr; } }
 
 .article-meta { display: flex; gap: var(--space-5); font-size: var(--text-sm); color: var(--color-gray-500); margin-bottom: var(--space-8); flex-wrap: wrap; }
 .article-hero-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: var(--radius-xl); margin-bottom: var(--space-8); display: block; }
 </style>
-</head>
+<style>
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: var(--color-accent-500, #F97316);
+  z-index: 2000;
+  transition: width 0.1s linear;
+}
+</style>
+<div class="reading-progress" id="readingProgress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Tiến độ đọc bài"></div>
+<script>
+(function(){
+  var bar = document.getElementById('readingProgress');
+  if (!bar) return;
+  var raf;
+  window.addEventListener('scroll', function() {
+    if (raf) return;
+    raf = requestAnimationFrame(function() {
+      var scrolled = window.scrollY;
+      var total = document.documentElement.scrollHeight - window.innerHeight;
+      var pct = total > 0 ? Math.min(100, (scrolled / total) * 100) : 0;
+      bar.style.width = pct + '%';
+      bar.setAttribute('aria-valuenow', Math.round(pct));
+      raf = null;
+    });
+  }, { passive: true });
+})();
+</script></head>
 <body class="page-body" data-include-page="blog">
 
 <div data-include="/partials/header.html"></div>
@@ -143,7 +173,7 @@
         </ol>
 
         <div style="background:var(--color-navy-50);border-left:4px solid var(--color-accent-500);padding:var(--space-5);border-radius:0 var(--radius-md) var(--radius-md) 0;margin-top:var(--space-8)">
-          <p style="margin:0;font-size:var(--text-sm);color:var(--color-navy-800)"><strong>Xưởng của bạn đang gặp vấn đề tương tự?</strong> Liên hệ kỹ sư DOWIN để được khảo sát và phân tích chi phí — hoàn toàn miễn phí. <a href="/contact.html" style="color:var(--color-primary);font-weight:600">Đặt lịch tư vấn →</a></p>
+          <p style="margin:0;font-size:var(--text-sm);color:var(--color-navy-800)"><strong>Xưởng của bạn đang gặp vấn đề tương tự?</strong> Liên hệ kỹ sư DOWIN để được khảo sát và phân tích chi phí — hoàn toàn miễn phí. <a href="/contact.html" style="color:var(--color-navy-700);font-weight:600">Đặt lịch tư vấn →</a></p>
         </div>
       </div>
 
