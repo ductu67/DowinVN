@@ -193,7 +193,14 @@
         var lang = el.dataset.lang;
         var meta = lang === 'en' ? enMeta : viMeta;
         if (meta && meta.getAttribute('href')) {
-          window.location.href = meta.getAttribute('href');
+          var href = meta.getAttribute('href');
+          try {
+            // Use pathname only so the switcher works on any origin (local dev + production)
+            var url = new URL(href);
+            window.location.href = url.pathname + url.search + url.hash;
+          } catch (err) {
+            window.location.href = href;
+          }
         }
       });
     });

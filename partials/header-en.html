@@ -1,0 +1,48 @@
+<header class="header" id="site-header">
+
+  <a class="logo" href="/en-index.html">
+    <img class="logo__img" src="/logo.png" alt="DOWIN Vietnam logo" width="40" height="40">
+    <span class="logo__name">DOWIN 東雲工業</span>
+  </a>
+
+  <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+
+    <a href="/en-index.html" data-nav="home">Home</a>
+
+    <div class="nav-dropdown" data-nav="products">
+      <button class="nav-dropdown__btn" type="button" aria-expanded="false" aria-haspopup="true">
+        Products
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </button>
+      <div class="nav-dropdown__menu" role="menu">
+        <a href="/en-product-detail.html" role="menuitem">DW-1000 Molding Machine</a>
+        <a href="/en-product-detail.html" role="menuitem">DW-1200 Molding Machine</a>
+        <a href="/en-product-detail.html" role="menuitem">DW-1600 Molding Machine</a>
+        <hr style="border:none;border-top:1px solid var(--border-color);margin:4px 8px;">
+        <a href="/en-products.html" role="menuitem">View All Products</a>
+      </div>
+    </div>
+
+    <a href="/en-projects.html" data-nav="solutions">Solutions</a>
+    <a href="/en-contact.html" data-nav="contact">Contact</a>
+
+  </nav>
+
+  <div class="header-actions">
+    <div class="header-lang">
+      <a href="#" data-lang="vi" aria-label="Tiếng Việt">VI</a>
+      <span aria-hidden="true">|</span>
+      <a href="#" data-lang="en" class="active" aria-label="English">EN</a>
+    </div>
+    <a href="/en-contact.html" class="btn btn-primary btn-sm">📋 Get Quote</a>
+  </div>
+
+  <button type="button" class="nav-toggle" id="nav-toggle"
+          aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+</header>
+<div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>

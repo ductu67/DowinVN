@@ -1,4 +1,11 @@
 {
-  "outputDirectory": "dist",
-  "buildCommand": "npm run build"
+  "outputDirectory": ".",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/dw-1000", "destination": "/products/dw-1000", "permanent": true },
+    { "source": "/dw-1200", "destination": "/products/dw-1200", "permanent": true },
+    { "source": "/dw-1600", "destination": "/products/dw-1600", "permanent": true },
+    { "source": "/product-detail", "destination": "/products/dw-1000", "permanent": true }
+  ]
 }

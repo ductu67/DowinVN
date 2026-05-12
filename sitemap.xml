@@ -1,14 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://dowinvietnam.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://dowinvietnam.com/index.html</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://dowinvietnam.com/en-index.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://dowinvietnam.com/products.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://dowinvietnam.com/en-products.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://dowinvietnam.com/product-detail.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://dowinvietnam.com/en-product-detail.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://dowinvietnam.com/projects.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://dowinvietnam.com/en-projects.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://dowinvietnam.com/contact.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://dowinvietnam.com/en-contact.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ===== Home ===== -->
+  <url>
+    <loc>https://dowinvietnam.com/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://dowinvietnam.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dowinvietnam.com/en-index.html"/>
+    <changefreq>weekly</changefreq><priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://dowinvietnam.com/en-index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dowinvietnam.com/en-index.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://dowinvietnam.com/"/>
+    <changefreq>weekly</changefreq><priority>0.9</priority>
+  </url>
+
+  <!-- ===== Products ===== -->
+  <url>
+    <loc>https://dowinvietnam.com/products/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://dowinvietnam.com/products/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dowinvietnam.com/en-products.html"/>
+    <changefreq>weekly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dowinvietnam.com/en-products.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dowinvietnam.com/en-products.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://dowinvietnam.com/products/"/>
+    <changefreq>weekly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dowinvietnam.com/products/dw-1000.html</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://dowinvietnam.com/products/dw-1000.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dowinvietnam.com/en-product-detail.html"/>
+    <changefreq>monthly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dowinvietnam.com/products/dw-1200.html</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://dowinvietnam.com/products/dw-1200.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dowinvietnam.com/en-product-detail.html"/>
+    <changefreq>monthly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dowinvietnam.com/products/dw-1600.html</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://dowinvietnam.com/products/dw-1600.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dowinvietnam.com/en-product-detail.html"/>
+    <changefreq>monthly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dowinvietnam.com/products/sand-mixer.html</loc>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dowinvietnam.com/products/casting-line.html</loc>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dowinvietnam.com/products/compare.html</loc>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dowinvietnam.com/en-product-detail.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dowinvietnam.com/en-product-detail.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://dowinvietnam.com/products/dw-1000.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+
+  <!-- ===== Projects / Solutions ===== -->
+  <url>
+    <loc>https://dowinvietnam.com/projects/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://dowinvietnam.com/projects/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dowinvietnam.com/en-projects.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dowinvietnam.com/en-projects.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dowinvietnam.com/en-projects.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://dowinvietnam.com/projects/"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+
+  <!-- ===== Contact ===== -->
+  <url>
+    <loc>https://dowinvietnam.com/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://dowinvietnam.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dowinvietnam.com/en-contact.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dowinvietnam.com/en-contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dowinvietnam.com/en-contact.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://dowinvietnam.com/contact.html"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+
+  <!-- ===== About / Services / FAQ / Downloads ===== -->
+  <url>
+    <loc>https://dowinvietnam.com/about.html</loc>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dowinvietnam.com/services.html</loc>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dowinvietnam.com/faq.html</loc>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dowinvietnam.com/downloads.html</loc>
+    <changefreq>monthly</changefreq><priority>0.6</priority>
+  </url>
+
+  <!-- ===== Blog ===== -->
+  <url>
+    <loc>https://dowinvietnam.com/blog/</loc>
+    <changefreq>weekly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dowinvietnam.com/blog/bao-tri-may-ep-khuon.html</loc>
+    <changefreq>monthly</changefreq><priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dowinvietnam.com/blog/case-study-hai-duong.html</loc>
+    <changefreq>monthly</changefreq><priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dowinvietnam.com/blog/chon-may-ep-khuon-cat.html</loc>
+    <changefreq>monthly</changefreq><priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dowinvietnam.com/blog/quy-trinh-duc-tu-dong.html</loc>
+    <changefreq>monthly</changefreq><priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dowinvietnam.com/blog/servo-vs-thuy-luc.html</loc>
+    <changefreq>monthly</changefreq><priority>0.6</priority>
+  </url>
+
+  <!-- ===== Other ===== -->
+  <url>
+    <loc>https://dowinvietnam.com/thank-you.html</loc>
+    <changefreq>yearly</changefreq><priority>0.3</priority>
+  </url>
+
 </urlset>
