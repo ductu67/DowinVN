@@ -124,20 +124,18 @@
     allDone.then(function () {
       document.dispatchEvent(new CustomEvent('includes:loaded'));
     });
-
-    // Expose as window.includesLoaded for external consumers
-    window.includesLoaded = allDone;
   }
 
-  // Expose the promise immediately (resolves once runIncludes completes)
+  // Expose a stable promise that resolves when all includes finish.
+  // It is set up once here and resolved via the 'includes:loaded' event,
+  // so external consumers always get the same reference regardless of timing.
   var resolveLoaded;
   window.includesLoaded = new Promise(function (resolve) {
     resolveLoaded = resolve;
   });
 
-  // Override: once runIncludes fires, also resolve the pre-exposed promise
   document.addEventListener('includes:loaded', function () {
-    if (resolveLoaded) resolveLoaded();
+    resolveLoaded();
   });
 
   if (document.readyState === 'loading') {

@@ -1,0 +1,10 @@
+node_modules/
+docs/
+scripts/
+.code-review-graph/
+.vscode/
+README.md
+package.json
+package-lock.json
+.gitignore
+memory/

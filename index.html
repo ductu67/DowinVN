@@ -12,6 +12,8 @@
 <meta property="og:title" content="Máy Ép Khuôn Cát, Thiết Bị Đúc Công Nghiệp | DOWIN Việt Nam">
 <meta property="og:description" content="DOWIN Việt Nam — nhà cung cấp máy ép khuôn cát tươi DW-1000/1200/1600, máy trộn cát và dây chuyền đúc tự động.">
 <meta property="og:image" content="https://dowinvietnam.com/images/banner.webp">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1080">
 <meta property="og:locale" content="vi_VN">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Máy Ép Khuôn Cát, Thiết Bị Đúc Công Nghiệp | DOWIN Việt Nam">
@@ -23,6 +25,7 @@
 <link rel="stylesheet" href="/css/design-system.css">
 <link rel="stylesheet" href="/css/components.css">
 <link rel="stylesheet" href="/css/layout.css">
+<link rel="preload" href="/images/banner.avif" as="image" type="image/avif">
 <link rel="preconnect" href="https://www.googletagmanager.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,8 +53,7 @@
   "@type": "WebSite",
   "name": "DOWIN Việt Nam",
   "url": "https://dowinvietnam.com/",
-  "inLanguage": "vi",
-  "potentialAction": {"@type": "SearchAction","target": {"@type": "EntryPoint","urlTemplate": "https://dowinvietnam.com/products/?q={search_term_string}"},"query-input": "required name=search_term_string"}
+  "inLanguage": "vi"
 }
 </script>
 <style>
@@ -90,7 +92,7 @@
     <picture>
       <source srcset="/images/banner.avif" type="image/avif">
       <source srcset="/images/banner.webp" type="image/webp">
-      <img class="hero__bg" src="/images/banner.jpg" alt="Nhà máy DOWIN Việt Nam — dây chuyền đúc công nghiệp" width="1920" height="1080" fetchpriority="high" decoding="async">
+      <img class="hero__bg" src="/images/banner.jpg" alt="Nhà máy DOWIN Việt Nam — dây chuyền đúc công nghiệp" width="1920" height="1080" fetchpriority="high" decoding="sync">
     </picture>
     <div class="hero__overlay" aria-hidden="true"></div>
     <div class="container hero__content">
@@ -99,7 +101,7 @@
       <p class="hero__subtitle">Dòng máy DW-1000 / 1200 / 1600 — Năng suất cao, bền bỉ,<br>hỗ trợ lắp đặt &amp; bảo hành toàn quốc</p>
       <div class="hero__actions">
         <a href="/contact.html" class="btn btn-primary btn-lg">Nhận báo giá ngay</a>
-        <a href="/products/index.html" class="btn btn-outline btn-lg" style="color:white;border-color:rgba(255,255,255,0.55)">Xem sản phẩm</a>
+        <a href="/vi/products/index.html" class="btn btn-outline btn-lg" style="color:white;border-color:rgba(255,255,255,0.55)">Xem sản phẩm</a>
       </div>
     </div>
   </section>
@@ -109,23 +111,31 @@
     <div class="container">
       <div class="card-grid card-grid--4">
         <div class="card-stat">
-          <div class="card-stat__number" data-target="500">500</div>
-          <div style="font-size:var(--text-xl);font-weight:700;color:var(--color-navy-900);line-height:1">+</div>
+          <div style="display:flex;align-items:baseline;justify-content:center">
+            <div class="card-stat__number" data-target="500">500</div>
+            <div class="card-stat__number">+</div>
+          </div>
           <div class="card-stat__label">Máy đã lắp đặt</div>
         </div>
         <div class="card-stat">
-          <div class="card-stat__number" data-target="15">15</div>
-          <div style="font-size:var(--text-xl);font-weight:700;color:var(--color-navy-900);line-height:1">+</div>
+          <div style="display:flex;align-items:baseline;justify-content:center">
+            <div class="card-stat__number" data-target="15">15</div>
+            <div class="card-stat__number">+</div>
+          </div>
           <div class="card-stat__label">Năm kinh nghiệm</div>
         </div>
         <div class="card-stat">
-          <div class="card-stat__number" data-target="100">100</div>
-          <div style="font-size:var(--text-xl);font-weight:700;color:var(--color-navy-900);line-height:1">+</div>
+          <div style="display:flex;align-items:baseline;justify-content:center">
+            <div class="card-stat__number" data-target="100">100</div>
+            <div class="card-stat__number">+</div>
+          </div>
           <div class="card-stat__label">Khách hàng doanh nghiệp</div>
         </div>
         <div class="card-stat">
-          <div class="card-stat__number" data-target="24">24</div>
-          <div style="font-size:var(--text-xl);font-weight:700;color:var(--color-navy-900);line-height:1">/7</div>
+          <div style="display:flex;align-items:baseline;justify-content:center">
+            <div class="card-stat__number" data-target="24">24</div>
+            <div class="card-stat__number">/7</div>
+          </div>
           <div class="card-stat__label">Hỗ trợ kỹ thuật</div>
         </div>
       </div>
@@ -144,7 +154,7 @@
       <div class="card-grid card-grid--3" style="margin-bottom:var(--space-8)">
 
         <article class="card-product">
-          <a href="/products/dw-1000.html" class="card-product__img" aria-label="Máy ép khuôn cát DW-1000">
+          <a href="/vi/products/dw-1000.html" class="card-product__img" aria-label="Máy ép khuôn cát DW-1000">
             <picture>
               <source srcset="/images/products/molding.avif" type="image/avif">
               <source srcset="/images/products/molding.webp" type="image/webp">
@@ -152,7 +162,7 @@
             </picture>
           </a>
           <div class="card-product__body">
-            <h3 class="card-product__title"><a href="/products/dw-1000.html">Máy Ép Khuôn Cát DW-1000</a></h3>
+            <h3 class="card-product__title"><a href="/vi/products/dw-1000.html">Máy Ép Khuôn Cát DW-1000</a></h3>
             <p class="card-product__excerpt">Phù hợp xưởng đúc vừa và nhỏ. Tốc độ cao, kết cấu chắc chắn, dễ vận hành.</p>
             <div class="card-product__specs">
               <span>120 khuôn/giờ</span>
@@ -162,13 +172,13 @@
             </div>
           </div>
           <div class="card-product__footer">
-            <a href="/products/dw-1000.html" class="btn btn-primary btn-sm">Xem chi tiết</a>
+            <a href="/vi/products/dw-1000.html" class="btn btn-primary btn-sm">Xem chi tiết</a>
             <a href="/contact.html" class="btn btn-outline btn-sm">Báo giá</a>
           </div>
         </article>
 
         <article class="card-product">
-          <a href="/products/dw-1200.html" class="card-product__img" aria-label="Máy ép khuôn cát DW-1200">
+          <a href="/vi/products/dw-1200.html" class="card-product__img" aria-label="Máy ép khuôn cát DW-1200">
             <picture>
               <source srcset="/images/products/molding.avif" type="image/avif">
               <source srcset="/images/products/molding.webp" type="image/webp">
@@ -176,7 +186,7 @@
             </picture>
           </a>
           <div class="card-product__body">
-            <h3 class="card-product__title"><a href="/products/dw-1200.html">Máy Ép Khuôn Cát DW-1200</a></h3>
+            <h3 class="card-product__title"><a href="/vi/products/dw-1200.html">Máy Ép Khuôn Cát DW-1200</a></h3>
             <p class="card-product__excerpt">Hiệu suất trung bình, tiết kiệm năng lượng. Phổ biến nhất trong dòng DW.</p>
             <div class="card-product__specs">
               <span>180 khuôn/giờ</span>
@@ -186,13 +196,13 @@
             </div>
           </div>
           <div class="card-product__footer">
-            <a href="/products/dw-1200.html" class="btn btn-primary btn-sm">Xem chi tiết</a>
+            <a href="/vi/products/dw-1200.html" class="btn btn-primary btn-sm">Xem chi tiết</a>
             <a href="/contact.html" class="btn btn-outline btn-sm">Báo giá</a>
           </div>
         </article>
 
         <article class="card-product">
-          <a href="/products/dw-1600.html" class="card-product__img" aria-label="Máy ép khuôn cát DW-1600">
+          <a href="/vi/products/dw-1600.html" class="card-product__img" aria-label="Máy ép khuôn cát DW-1600">
             <picture>
               <source srcset="/images/products/molding.avif" type="image/avif">
               <source srcset="/images/products/molding.webp" type="image/webp">
@@ -200,7 +210,7 @@
             </picture>
           </a>
           <div class="card-product__body">
-            <h3 class="card-product__title"><a href="/products/dw-1600.html">Máy Ép Khuôn Cát DW-1600</a></h3>
+            <h3 class="card-product__title"><a href="/vi/products/dw-1600.html">Máy Ép Khuôn Cát DW-1600</a></h3>
             <p class="card-product__excerpt">Dành cho xưởng công nghiệp lớn. Năng suất và kích thước khuôn tối ưu.</p>
             <div class="card-product__specs">
               <span>250 khuôn/giờ</span>
@@ -210,7 +220,7 @@
             </div>
           </div>
           <div class="card-product__footer">
-            <a href="/products/dw-1600.html" class="btn btn-primary btn-sm">Xem chi tiết</a>
+            <a href="/vi/products/dw-1600.html" class="btn btn-primary btn-sm">Xem chi tiết</a>
             <a href="/contact.html" class="btn btn-outline btn-sm">Báo giá</a>
           </div>
         </article>
@@ -220,7 +230,7 @@
       <div class="card-grid card-grid--2">
 
         <article class="card-product">
-          <a href="/products/sand-mixer.html" class="card-product__img" aria-label="Máy trộn cát công nghiệp">
+          <a href="/vi/products/sand-mixer.html" class="card-product__img" aria-label="Máy trộn cát công nghiệp">
             <picture>
               <source srcset="/images/products/mixer.avif" type="image/avif">
               <source srcset="/images/products/mixer.webp" type="image/webp">
@@ -228,17 +238,17 @@
             </picture>
           </a>
           <div class="card-product__body">
-            <h3 class="card-product__title"><a href="/products/sand-mixer.html">Máy Trộn Cát Công Nghiệp</a></h3>
+            <h3 class="card-product__title"><a href="/vi/products/sand-mixer.html">Máy Trộn Cát Công Nghiệp</a></h3>
             <p class="card-product__excerpt">Trộn cát tươi đồng đều, liên tục. Cung cấp nguyên liệu ổn định cho toàn dây chuyền đúc.</p>
           </div>
           <div class="card-product__footer">
-            <a href="/products/sand-mixer.html" class="btn btn-primary btn-sm">Xem chi tiết</a>
+            <a href="/vi/products/sand-mixer.html" class="btn btn-primary btn-sm">Xem chi tiết</a>
             <a href="/contact.html" class="btn btn-outline btn-sm">Báo giá</a>
           </div>
         </article>
 
         <article class="card-product">
-          <a href="/products/casting-line.html" class="card-product__img" aria-label="Dây chuyền đúc tự động">
+          <a href="/vi/products/casting-line.html" class="card-product__img" aria-label="Dây chuyền đúc tự động">
             <picture>
               <source srcset="/images/products/line.avif" type="image/avif">
               <source srcset="/images/products/line.webp" type="image/webp">
@@ -246,11 +256,11 @@
             </picture>
           </a>
           <div class="card-product__body">
-            <h3 class="card-product__title"><a href="/products/casting-line.html">Dây Chuyền Đúc Tự Động</a></h3>
+            <h3 class="card-product__title"><a href="/vi/products/casting-line.html">Dây Chuyền Đúc Tự Động</a></h3>
             <p class="card-product__excerpt">Hệ thống đúc khép kín từ trộn cát → tạo khuôn → rót kim loại. Tối ưu năng suất, giảm nhân công.</p>
           </div>
           <div class="card-product__footer">
-            <a href="/products/casting-line.html" class="btn btn-primary btn-sm">Xem chi tiết</a>
+            <a href="/vi/products/casting-line.html" class="btn btn-primary btn-sm">Xem chi tiết</a>
             <a href="/contact.html" class="btn btn-outline btn-sm">Báo giá</a>
           </div>
         </article>
@@ -258,7 +268,7 @@
       </div>
 
       <div style="text-align:center;margin-top:var(--space-8)">
-        <a href="/products/index.html" class="btn btn-secondary btn-lg">Xem toàn bộ sản phẩm →</a>
+        <a href="/vi/products/index.html" class="btn btn-secondary btn-lg">Xem toàn bộ sản phẩm →</a>
       </div>
     </div>
   </section>
@@ -335,7 +345,7 @@
       </div>
       <div class="card-grid card-grid--3">
 
-        <a href="/projects/index.html" class="card-project">
+        <a href="/projects/" class="card-project">
           <picture>
             <source srcset="/images/projects/project1.avif" type="image/avif">
             <source srcset="/images/projects/project1.webp" type="image/webp">
@@ -347,7 +357,7 @@
           </div>
         </a>
 
-        <a href="/projects/index.html" class="card-project">
+        <a href="/projects/" class="card-project">
           <picture>
             <source srcset="/images/projects/project2.avif" type="image/avif">
             <source srcset="/images/projects/project2.webp" type="image/webp">
@@ -359,7 +369,7 @@
           </div>
         </a>
 
-        <a href="/projects/index.html" class="card-project">
+        <a href="/projects/" class="card-project">
           <picture>
             <source srcset="/images/projects/project3.avif" type="image/avif">
             <source srcset="/images/projects/project3.webp" type="image/webp">
@@ -371,7 +381,7 @@
           </div>
         </a>
 
-        <a href="/projects/index.html" class="card-project">
+        <a href="/projects/" class="card-project">
           <picture>
             <source srcset="/images/projects/project4.avif" type="image/avif">
             <source srcset="/images/projects/project4.webp" type="image/webp">
@@ -383,7 +393,7 @@
           </div>
         </a>
 
-        <a href="/projects/index.html" class="card-project">
+        <a href="/projects/" class="card-project">
           <picture>
             <source srcset="/images/projects/project5.avif" type="image/avif">
             <source srcset="/images/projects/project5.webp" type="image/webp">
@@ -395,7 +405,7 @@
           </div>
         </a>
 
-        <a href="/projects/index.html" class="card-project">
+        <a href="/projects/" class="card-project">
           <picture>
             <source srcset="/images/projects/project6.avif" type="image/avif">
             <source srcset="/images/projects/project6.webp" type="image/webp">
@@ -409,7 +419,7 @@
 
       </div>
       <div style="text-align:center;margin-top:var(--space-8)">
-        <a href="/projects/index.html" class="btn btn-secondary btn-lg">Xem tất cả dự án →</a>
+        <a href="/projects/" class="btn btn-secondary btn-lg">Xem tất cả dự án →</a>
       </div>
     </div>
   </section>
